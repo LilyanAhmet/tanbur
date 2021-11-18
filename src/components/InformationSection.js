@@ -6,7 +6,11 @@ import AncientPersia_Img from "../resources/img/ancient-persia-img.png";
 import Ahlehaqq_Img from "../resources/img/ahle-haqq-img.png";
 import Hadjnemat_Img from "../resources/img/hadj-nemat-img.png";
 import Ostadelahi_Img from "../resources/img/ostad-elahi-img.png";
-
+import song1 from '../resources/audio/1-history-prehistory.mp3'
+import song2 from '../resources/audio/2-history-ancientpersia.mp3'
+import song3 from '../resources/audio/3-history-ahle-haqq.mp3'
+import song4 from '../resources/audio/4-history-hadjnemat.mp3'
+import song5 from '../resources/audio/5-history-ostad.mp3'
 export default class InformationSection extends Component {
     render() {
         return (
@@ -20,6 +24,7 @@ export default class InformationSection extends Component {
                 the memory of a time before creation."
                 subtext1="Tarz-e-Yâri Suite"
                 subtext2="A Spritual Epic"
+                song={song1}
                 />
                 <LeftInfo
                 image={AncientPersia_Img}
@@ -29,6 +34,7 @@ export default class InformationSection extends Component {
                 description2="In his Shahnâme, Ferdowsi describes the legendary heroes Rotsam and Esfandyâr as singing their painful destiny accompanied by the tanbur."
                 subtext1="Haft Khân-e Rostam Suite"
                 subtext2="The Path of Divine Love"
+                song={song2}
                 />
                 <RightInfo
                 image={Ahlehaqq_Img}
@@ -38,6 +44,7 @@ export default class InformationSection extends Component {
                 description2=""
                 subtext1="Shâh Khoshini Suite"
                 subtext2="Awakening"
+                song={song3}
                 />
                 <LeftInfo
                 image={Hadjnemat_Img}
@@ -48,6 +55,7 @@ export default class InformationSection extends Component {
                 Ostad has enriched it to such an extent that it is now considered one of the jewels of the tanbur repertoire."
                 subtext1="Sheykh Amiri Suite"
                 subtext2="Dialogue with the Beloved"
+                song={song4}
                 />
                 <RightInfo
                 image={Ostadelahi_Img}
@@ -57,6 +65,7 @@ export default class InformationSection extends Component {
                 description2="Elahi transformed the two-stringed instrument, adding a third string and developing new playing techniques that used all ten fingers."
                 subtext1="Ostad Elahi’s Sheykh Amiri"
                 subtext2="Dialogue with the Beloved"
+                song={song5}
                 />
             </div>
         )

@@ -15,7 +15,7 @@ const LeftComp = props => {
                             </div>
                         </div>
                         <ReactPlayer
-                        url="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+                        url={props.song}
                         width="80%"
                         height="2em"
                         playing={false}
