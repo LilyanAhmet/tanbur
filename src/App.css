@@ -1,0 +1,306 @@
+/* Eymen Css */
+
+/* Header-Body */
+
+header{
+  font-family: Cormorant;
+}
+
+body{
+  font-family: Cormorant;
+}
+
+.banner-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* ParagraphInfo */
+
+.paragraphinfo{
+  max-width: 84%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paragraphinfo h2 {
+  font-size: 1.7vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.4vw;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  padding: 8% 0;
+}
+
+/* BackgroundVideoSection */
+
+#video1{
+  z-index: -1;
+  width: 100%;
+}
+
+/* InformationSection */
+
+.info-text {
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: left;
+}
+.info-text .text-wrapper{
+  padding-left: 10%;
+}
+.info-text .text-wrapper2{
+  padding-left: 18%;
+}
+.info-text h2{
+  font-family: Cormorant SC;
+  font-size: 2.6vw;
+  letter-spacing: 0.125em;
+  color: #DA8E13;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+}
+.info-text .text-box{
+  text-transform: capitalize;
+}
+.info-text .text-holder p{
+  font-size: 1.3vw;
+  padding-left: 20px;
+  margin-right: 7%;
+}
+.info-text .song-textbox{
+  padding-top: 4%;
+  text-transform: uppercase;
+}
+.info-text .song-name{
+  font-size: 1.3vw;
+}
+.info-text .song-subtext{
+  font-size: 1vw;
+}
+.info-text .text-holder{
+  border-left: 3px solid #DA8E13;
+}
+
+/* InformationSection2*/
+
+#preview-image-wrapper, #banner-img{
+  position: relative;
+}
+#preview-image-wrapper ul { 
+  list-style-type: none;
+  position: absolute;
+  display: block;
+  height: 126%;
+  width:100%;
+  margin-top: -7%;
+  padding:0;
+  z-index:200;
+  overflow:hidden;
+}
+#preview-image-wrapper li { 
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #9D795B 6.44%, #513D2B 12.16%, #DA8E13 40.24%, #DA8E13 48.29%, #DA8E13 55.57%, #4A3A2E 88.3%, #9D795B 93.11%, rgba(255, 255, 255, 0) 100%);
+  height: 100%;
+  width:1%;
+  margin-left: 85%;
+  display:inline-block;
+  margin-right: -4px;
+}
+#preview-image-wrapper .first-img-second-line{
+  margin-left: 8% !important;
+}
+#preview-image-wrapper .second-img-first-line{
+  margin-left: 2% !important;
+}
+#preview-image-wrapper .second-img-second-line{
+  margin-left: 10% !important;
+}
+#preview-image-wrapper .second-img-third-line{
+  margin-left: 5% !important;
+}
+#rightbanner{
+  padding-left: 18%;
+}
+#leftbanner{
+  padding-right: 18%;
+}
+#versus{
+  font-size: 7vw;
+  text-align: center;
+  color: #DA8E13;
+  margin: 5%;
+}
+#versus span{
+  font-size: 5vw;
+}
+#rightcomp span span,
+#leftcomp span span{
+  font-size: 7.6vw;
+}
+#leftcomp h2,
+#rightcomp h2{
+  font-size: 5.6vw;
+  position: relative;
+  margin-bottom: 10%;
+}
+#rightcomp h2{
+margin-left: 18%;
+}
+#leftcomp h2{
+margin-right: 19%;
+text-align: end;
+}
+#leftcomp h2 .outer,
+#rightcomp h2 .outer{
+  background-color: white;
+}
+#leftcomp h2 span{
+  padding-left: 1%;
+}
+#leftcomp h2::after,
+#rightcomp h2::after { 
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.75em !important;
+  border-top: 0.12em solid #DA8E13;
+  z-index: -1;
+}
+.info-text2 .text-wrapper{
+  padding-left: 10%;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1200px) {
+  .info-text {
+      letter-spacing: 2px;
+  }
+  .info-text .text-holder p{
+      margin-right: 6%;
+  }
+  .info-text .text-wrapper{
+      padding-left: 10%;
+  }
+  .info-text .text-wrapper2{
+    padding-left: 18%;
+  }
+  .info-text .song-textbox{
+      padding-top: 2%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header{
+      padding-bottom: 30px;
+  }
+  header h2,.paragraphinfo h2 {
+      font-size: 3.5vw;
+      line-height: 3.4vw;
+  }
+  .info-text h2{
+      font-size: 4.6vw;
+  }
+  .info-text .text-holder p{
+      font-size: 3.4vw;
+      padding-left: 20px;
+      margin-right: 9%;
+  }
+  .info-text .song-name{
+      font-size: 2.3vw;
+  }
+  .info-text .song-subtext{
+      font-size: 2vw;
+  }
+  .info-text .text-wrapper{
+    padding-left: 15%;
+}
+.info-text .text-wrapper2{
+  padding-left: 15%;
+}
+#versus{
+  font-size: 7vw;
+  margin: 8%;
+}
+  #rightbanner, #leftbanner{
+      padding: 0 15%;
+  }
+  #leftcomp h2,
+  #rightcomp h2{
+      font-size: 5.6vw;
+      position: relative;
+      padding: 0px 15%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 3%;
+      margin-bottom: 10%;
+      text-align: center;
+  }
+  #leftcomp h2 .outer,
+  #rightcomp h2 .outer{
+      background-color: white;
+      padding: 0 5%;
+  }
+  #leftcomp h2::after,
+  #rightcomp h2::after { 
+      height: 0.75em !important;
+      border-top: 3px solid #DA8E13;
+  }
+  #preview-image-wrapper li { 
+    margin-left: 70%;
+  }
+  #preview-image-wrapper .second-img-first-line{
+    margin-left: 17% !important;
+  }
+  #preview-image-wrapper .second-img-second-line{
+    margin-left: 8% !important;
+  }
+}
+
+/* ----------- Default CSS ----------- */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
