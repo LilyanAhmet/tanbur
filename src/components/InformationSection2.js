@@ -9,7 +9,7 @@ export default class InformationSection2 extends Component {
     render() {
         return (
 
-            <div className="mt-5">
+            <div className="">
                 <RightComp
                 image={Tanbur_2string}
                 title="2 Strings"

@@ -7,7 +7,7 @@ const RightComp = props => {
             <div className="row mx-0">
                 <div className="col-12 col-md-6 px-0">
                     <div className="col-12 col-md-6 px-0 info-text" id="rightcomp">
-                        <h2 className="pt-4 d-block d-md-none"><span className="outer">2 <span>S</span>tring</span></h2>
+                        <h2 className="d-block d-md-none"><span className="outer">2 <span>S</span>tring</span></h2>
                     </div>
                     <div id="preview-image-wrapper">
                         <ul>

@@ -6,7 +6,7 @@ const LeftComp = props => {
         <div>
             <div className="row mx-0">
                 <div className="col-12 col-md-6 px-0 info-text order-2 order-md-1" id="leftcomp">
-                <h2 className="pt-4"><span className="outer">3 <span>S</span>tring</span></h2>
+                    <h2 className="pt-4 d-none d-md-block"><span className="outer">3 <span>S</span>tring</span></h2>
                     <div className="text-wrapper2">
                         <div className="text-box">
                             <div className="song-textbox">
@@ -24,6 +24,9 @@ const LeftComp = props => {
                     </div>
                 </div>
                 <div className="col-12 col-md-6 px-0  order-1 order-md-2">
+                    <div className="col-12 col-md-6 px-0 d-block d-md-none info-text order-2 order-md-1" id="leftcomp">
+                        <h2><span className="outer">3 <span>S</span>tring</span></h2>
+                    </div>
                     <div id="preview-image-wrapper">
                         <ul>
                             <li className="second-img-first-line"></li>
