@@ -56,7 +56,7 @@ body{
 }
 .info-text .text-wrapper2{
   padding-left: 18%;
-  margin-top: 7%;
+  margin-top: 5%;
 }
 .info-text h2{
   font-family: Cormorant SC;
@@ -76,6 +76,10 @@ body{
 }
 .info-text .song-textbox{
   padding-top: 4%;
+  text-transform: uppercase;
+}
+.info-text .text-wrapper2 .song-textbox{
+  padding-top: 0%;
   text-transform: uppercase;
 }
 .info-text .song-name{
@@ -147,7 +151,7 @@ body{
 #rightcomp h2{
   font-size: 5.6vw;
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 0%;
 }
 #rightcomp h2{
 margin-left: 18%;
@@ -192,6 +196,8 @@ text-align: end;
   }
   .info-text .text-wrapper2{
     padding-left: 18%;
+    letter-spacing: 1px;
+    margin-top: 0%;
   }
   .info-text .song-textbox{
       padding-top: 2%;
@@ -225,6 +231,8 @@ text-align: end;
 }
 .info-text .text-wrapper2{
   padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 7%;
 }
 #versus{
   font-size: 7vw;

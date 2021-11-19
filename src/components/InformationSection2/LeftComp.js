@@ -6,9 +6,15 @@ const LeftComp = props => {
         <div>
             <div className="row mx-0">
                 <div className="col-12 col-md-6 px-0 info-text order-2 order-md-1" id="leftcomp">
-                    <h2 className="pt-4 d-none d-md-block"><span className="outer">3 <span>S</span>tring</span></h2>
+                    <h2 className="d-none d-md-block"><span className="outer">3 <span>S</span>tring</span></h2>
                     <div className="text-wrapper2">
                         <div className="text-box">
+                            <div className="text-holder">
+                                <p className="pb-1"> {props.description1}
+                                </p>
+                                <p className=""> {props.description2}
+                                </p>
+                            </div>
                             <div className="song-textbox">
                                 <p className="mb-0 song-name">{props.subtext1}</p>
                                 <p className="song-subtext">{props.subtext2}</p>
