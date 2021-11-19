@@ -12,6 +12,7 @@ export default class InformationSection2 extends Component {
                 <RightComp
                 image={Tanbur_2string}
                 title="2 Strings"
+                description1="Emâm Qoli, the last representative of the tradition of the Ahle Haqq’s tanbur from Lorestan, Iran."
                 subtext1="emam Qolı"
                 subtext2="saharı"
                 song={song6}
@@ -22,6 +23,7 @@ export default class InformationSection2 extends Component {
                 <LeftComp
                 image={Tanbur_3string}
                 title="3 Strings"
+                description1="Elahi transformed the two-stringed instrument, adding a third string and developing new playing techniques that used all ten fingers."
                 subtext1="ostad elahı"
                 subtext2="saharı"
                 song={song7}
