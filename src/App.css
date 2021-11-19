@@ -10,6 +10,11 @@ body {
   font-family: Cormorant;
 }
 
+.icon_3d {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
 .banner-img {
   display: block;
   margin-left: auto;
@@ -232,6 +237,9 @@ text-align: end;
   header{
       padding-bottom: 30px;
   }
+  .icon_3d {
+    width: 40%;
+  }
   header h2,.paragraphinfo h2 {
       font-size: 3.5vw;
       line-height: 3.4vw;
@@ -252,6 +260,7 @@ text-align: end;
   }
   .info-text .text-wrapper {
     padding-left: 15%;
+    margin-bottom: 5%;
 }
 .info-text .text-wrapper2 {
   padding-left: 15%;

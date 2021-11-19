@@ -54,10 +54,10 @@ function App() {
         ParagraphText="One of Ostad Elahi’s innovations is the introduction of a new resonance tuning (known as Farangi tuning) 
         imparting a new effect to the sound of the instrument that opens up novel horizons for the player."
         />
-        <MainParagraphInfo
-        />
         <CoverVideo
         video={video5}
+        />
+        <MainParagraphInfo
         />
         <ModelWhite />
         <ParagraphInfo
