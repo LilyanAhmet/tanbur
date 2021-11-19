@@ -38,6 +38,15 @@ const RightComp = props => {
                         height="2em"
                         playing={false}
                         controls={true}
+                        className="d-none d-md-block"
+                        />
+                        <ReactPlayer
+                        url={props.song}
+                        width="100%"
+                        height="2em"
+                        playing={false}
+                        controls={true}
+                        className="d-block d-md-none"
                         />
                     </div>
                 </div>
