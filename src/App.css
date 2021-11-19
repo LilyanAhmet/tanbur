@@ -2,15 +2,15 @@
 
 /* Header-Body */
 
-header{
+header {
   font-family: Cormorant;
 }
 
-body{
+body {
   font-family: Cormorant;
 }
 
-.banner-img{
+.banner-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -19,7 +19,7 @@ body{
 
 /* ParagraphInfo */
 
-.paragraphinfo{
+.paragraphinfo {
   max-width: 84%;
   margin-left: auto;
   margin-right: auto;
@@ -34,6 +34,28 @@ body{
   letter-spacing: 3px;
   text-transform: capitalize;
   padding: 8% 0;
+}
+
+/* MainParagraphInfo */
+
+.mainparagraphinfo {
+  max-width: 84%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainparagraphinfo h2,
+.mainparagraphinfo h2 span {
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.2vw;
+  letter-spacing: 3px;
+  line-height: 2em;
+}
+
+.mainparagraphinfo h2 span {
+  color: grey;
 }
 
 /* BackgroundVideoSection */
@@ -51,10 +73,10 @@ body{
   letter-spacing: 3px;
   text-align: left;
 }
-.info-text .text-wrapper{
+.info-text .text-wrapper {
   padding-left: 10%;
 }
-.info-text .text-wrapper2{
+.info-text .text-wrapper2 {
   padding-left: 18%;
   margin-top: 5%;
 }
@@ -69,12 +91,12 @@ body{
 .info-text .text-box{
   text-transform: capitalize;
 }
-.info-text .text-holder p{
+.info-text .text-holder p {
   font-size: 1.3vw;
   padding-left: 20px;
   margin-right: 7%;
 }
-.info-text .song-textbox{
+.info-text .song-textbox {
   padding-top: 4%;
   text-transform: uppercase;
 }
@@ -82,19 +104,19 @@ body{
   padding-top: 0%;
   text-transform: uppercase;
 }
-.info-text .song-name{
+.info-text .song-name {
   font-size: 1.3vw;
 }
-.info-text .song-subtext{
+.info-text .song-subtext {
   font-size: 1vw;
 }
-.info-text .text-holder{
+.info-text .text-holder {
   border-left: 3px solid #DA8E13;
 }
 
 /* InformationSection2*/
 
-#preview-image-wrapper, #banner-img{
+#preview-image-wrapper, #banner-img {
   position: relative;
 }
 #preview-image-wrapper ul { 
@@ -116,55 +138,55 @@ body{
   display:inline-block;
   margin-right: -4px;
 }
-#preview-image-wrapper .first-img-second-line{
+#preview-image-wrapper .first-img-second-line {
   margin-left: 8% !important;
 }
-#preview-image-wrapper .second-img-first-line{
+#preview-image-wrapper .second-img-first-line {
   margin-left: 2% !important;
 }
-#preview-image-wrapper .second-img-second-line{
+#preview-image-wrapper .second-img-second-line {
   margin-left: 10% !important;
 }
-#preview-image-wrapper .second-img-third-line{
+#preview-image-wrapper .second-img-third-line {
   margin-left: 5% !important;
 }
-#rightbanner{
+#rightbanner {
   padding-left: 18%;
 }
-#leftbanner{
+#leftbanner {
   padding-right: 18%;
 }
-#versus{
+#versus {
   font-size: 7vw;
   text-align: center;
   color: #DA8E13;
   margin: 5%;
 }
-#versus span{
+#versus span {
   font-size: 5vw;
 }
 #rightcomp span span,
-#leftcomp span span{
+#leftcomp span span {
   font-size: 7.6vw;
 }
 #leftcomp h2,
-#rightcomp h2{
+#rightcomp h2 {
   font-size: 5.6vw;
   position: relative;
   margin-bottom: 0%;
 }
-#rightcomp h2{
+#rightcomp h2 {
 margin-left: 18%;
 }
-#leftcomp h2{
+#leftcomp h2 {
 margin-right: 19%;
 text-align: end;
 }
 #leftcomp h2 .outer,
-#rightcomp h2 .outer{
+#rightcomp h2 .outer {
   background-color: white;
 }
-#leftcomp h2 span{
+#leftcomp h2 span {
   padding-left: 1%;
 }
 #leftcomp h2::after,
@@ -178,7 +200,7 @@ text-align: end;
   border-top: 0.12em solid #DA8E13;
   z-index: -1;
 }
-.info-text2 .text-wrapper{
+.info-text2 .text-wrapper {
   padding-left: 10%;
 }
 
@@ -188,18 +210,18 @@ text-align: end;
   .info-text {
       letter-spacing: 2px;
   }
-  .info-text .text-holder p{
+  .info-text .text-holder p {
       margin-right: 6%;
   }
-  .info-text .text-wrapper{
+  .info-text .text-wrapper {
       padding-left: 10%;
   }
-  .info-text .text-wrapper2{
+  .info-text .text-wrapper2 {
     padding-left: 18%;
     letter-spacing: 1px;
     margin-top: 0%;
   }
-  .info-text .song-textbox{
+  .info-text .song-textbox {
       padding-top: 2%;
   }
 }
@@ -212,66 +234,71 @@ text-align: end;
       font-size: 3.5vw;
       line-height: 3.4vw;
   }
-  .info-text h2{
+  .info-text h2 {
       font-size: 4.6vw;
   }
-  .info-text .text-holder p{
+  .info-text .text-holder p {
       font-size: 3.4vw;
       padding-left: 20px;
       margin-right: 9%;
   }
-  .info-text .song-name{
+  .info-text .song-name {
       font-size: 2.3vw;
   }
-  .info-text .song-subtext{
+  .info-text .song-subtext {
       font-size: 2vw;
   }
-  .info-text .text-wrapper{
+  .info-text .text-wrapper {
     padding-left: 15%;
 }
-.info-text .text-wrapper2{
+.info-text .text-wrapper2 {
   padding-left: 15%;
   padding-right: 15%;
   margin-top: 7%;
 }
-#versus{
+#versus {
   font-size: 7vw;
   margin: 7%;
   margin-top: 6%;
   margin-bottom: 2%;
 }
-  #rightbanner, #leftbanner{
-      padding: 0 15%;
-  }
-  #leftcomp h2,
-  #rightcomp h2{
-      font-size: 5.6vw;
-      position: relative;
-      padding: 0px 15%;
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 10%;
-      text-align: center;
-  }
-  #leftcomp h2 .outer,
-  #rightcomp h2 .outer{
-      background-color: white;
-      padding: 0 5%;
-  }
-  #leftcomp h2::after,
-  #rightcomp h2::after { 
-      height: 0.75em !important;
-      border-top: 3px solid #DA8E13;
-  }
-  #preview-image-wrapper li { 
-    margin-left: 70%;
-  }
-  #preview-image-wrapper .second-img-first-line{
-    margin-left: 17% !important;
-  }
-  #preview-image-wrapper .second-img-second-line{
-    margin-left: 8% !important;
-  }
+#rightbanner, #leftbanner {
+    padding: 0 15%;
+}
+#leftcomp h2,
+#rightcomp h2 {
+    font-size: 5.6vw;
+    position: relative;
+    padding: 0px 15%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10%;
+    text-align: center;
+}
+#leftcomp h2 .outer,
+#rightcomp h2 .outer {
+    background-color: white;
+    padding: 0 5%;
+}
+#leftcomp h2::after,
+#rightcomp h2::after { 
+    height: 0.75em !important;
+    border-top: 3px solid #DA8E13;
+}
+#preview-image-wrapper li { 
+  margin-left: 70%;
+}
+#preview-image-wrapper .second-img-first-line {
+  margin-left: 17% !important;
+}
+#preview-image-wrapper .second-img-second-line {
+  margin-left: 8% !important;
+}
+.mainparagraphinfo h2,
+.mainparagraphinfo h2 span {
+  font-size: 3.2vw;
+  letter-spacing: 1px;
+}
 }
 
 /* ----------- Default CSS ----------- */

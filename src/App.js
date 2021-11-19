@@ -4,6 +4,8 @@ import ParagraphInfo from './components/ParagraphInfo';
 import InformationSection from './components/InformationSection';
 import BackgroundVideoSection from '../src/components/BackgroundVideoSection';
 import InformationSection2 from './components/InformationSection2';
+import MainParagraphInfo from './components/MainParagraphInfo';
+import ModelWhite from './components/3dModels/ModelWhite';
 import video1 from '../src/resources/video/bg-video-1.mp4';
 import video2 from '../src/resources/video/bg-video-2.mp4';
 import video3 from '../src/resources/video/bg-video-3.mp4';
@@ -49,6 +51,9 @@ function App() {
         ParagraphText="One of Ostad Elahi’s innovations is the introduction of a new resonance tuning (known as Farangi tuning) 
         imparting a new effect to the sound of the instrument that opens up novel horizons for the player."
         />
+        <MainParagraphInfo
+        />
+        <ModelWhite />
       </div>
   );
 }
