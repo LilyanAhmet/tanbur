@@ -6,9 +6,12 @@ import BackgroundVideoSection from '../src/components/BackgroundVideoSection';
 import InformationSection2 from './components/InformationSection2';
 import MainParagraphInfo from './components/MainParagraphInfo';
 import ModelWhite from './components/3dModels/ModelWhite';
+import CoverVideo from './components/CoverVideo';
 import video1 from '../src/resources/video/bg-video-1.mp4';
 import video2 from '../src/resources/video/bg-video-2.mp4';
 import video3 from '../src/resources/video/bg-video-3.mp4';
+import video4 from '../src/resources/video/bg-video-4.mp4';
+import video5 from '../src/resources/video/tanbur-cover-video.mp4';
 
 function App() {
   return (
@@ -53,7 +56,17 @@ function App() {
         />
         <MainParagraphInfo
         />
+        <CoverVideo
+        video={video5}
+        />
         <ModelWhite />
+        <ParagraphInfo
+        ParagraphText="‘’From the sound of the tanbur emanate particles that produce various scenes. 
+        If we concentrate our attention with our eyes closed, those scenes can be seen as though on a movie screen.’’"
+        />
+        <BackgroundVideoSection
+          video={video4}
+        />
       </div>
   );
 }
