@@ -22,6 +22,11 @@ body {
   width: 100%;
 }
 
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display{
+  font-size: 1.3em;
+}
+
 /* ParagraphInfo */
 
 .paragraphinfo {
@@ -279,6 +284,11 @@ body {
   .paragraphinfo h2 {
     font-size: 3.5vw;
     line-height: 3.4vw;
+  }
+
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    font-size: 1em;
   }
 
   .info-text h2 {
