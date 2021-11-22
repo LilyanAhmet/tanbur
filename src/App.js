@@ -61,6 +61,10 @@ function App() {
         />
         <ModelWhite />
         <ParagraphInfo
+        ParagraphText="These innovations introduced by Ostad Elahi are presented and played as follow by Dr. Shahrokh Elahi, 
+        the youngest son of Ostad Elahi and the principal Legatee of his musical heritage."
+        />
+        <ParagraphInfo
         ParagraphText="‘’From the sound of the tanbur emanate particles that produce various scenes. 
         If we concentrate our attention with our eyes closed, those scenes can be seen as though on a movie screen.’’"
         />
