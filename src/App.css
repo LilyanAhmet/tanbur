@@ -251,8 +251,14 @@ audio::-webkit-media-controls-panel{
   padding-left: 10%;
 }
 
-/* MultipleVideos */
+/* 3dmodel */
 
+#modelwhite {
+  overflow: hidden;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
 
 /* Responsive */
 
