@@ -26,9 +26,8 @@ const MultipleVideos = props => {
                 </div>
                 <div className="col-12 col-md-12 col-xl-3 px-0">
                 <ReactPlayer
-                    url={'https://www.youtube.com/watch?v=E4cL9MOzjE8&ab_channel=beINSPORTST%C3%BCrkiye'}
+                    url={'https://www.youtube.com/watch?v=8SbUC-UaAxE'}
                     width="100%"
-
                     playing={false}
                     controls={true}
                     className="mx-auto"
@@ -40,7 +39,6 @@ const MultipleVideos = props => {
                 <ReactPlayer
                     url={'https://www.youtube.com/watch?v=bC8EmPA6H6g&ab_channel=Moshcam'}
                     width="100%"
-
                     playing={false}
                     controls={true}
                     className="mx-auto"
@@ -50,7 +48,6 @@ const MultipleVideos = props => {
                 <ReactPlayer
                     url={'https://www.youtube.com/watch?v=kXYiU_JCYtU&ab_channel=LinkinPark'}
                     width="100%"
-
                     playing={false}
                     controls={true}
                     className="mx-auto"
