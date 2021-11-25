@@ -13,7 +13,7 @@ const RightInfo = props => {
                         <h2 className="pt-3">{props.title}</h2>
                         <div className="text-box">
                             <div className="text-holder">
-                                <p className="pb-1"> {props.description1}
+                                <p className=""> {props.description1}
                                 </p>
                                 <p className=""> {props.description2}
                                 </p>
@@ -25,8 +25,8 @@ const RightInfo = props => {
                         </div>
                         <ReactPlayer
                         url={props.song}
-                        width="80%"
-                        height="2em"
+                        id="custom-player"
+                        width="100%"
                         playing={false}
                         controls={true}
                         />

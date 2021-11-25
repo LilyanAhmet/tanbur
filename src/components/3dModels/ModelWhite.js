@@ -80,7 +80,7 @@ export default function ModelWhite() {
   return (
     <div className="row mx-0">
         <div className="col-6 px-0">
-            <p> Good Luck</p>
+            <p>Hello !</p>
         </div>
         <div className="col-6 px-0" id="modelwhite">
             <Canvas

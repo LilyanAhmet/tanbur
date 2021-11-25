@@ -9,18 +9,16 @@ const MultipleVideos = props => {
                 <div className="col-12 col-md-6 col-xl-3 px-0">
                 <ReactPlayer
                     width="100%"
-                    pip
-                    controls="true"
-                    config={{ file: { forceHLS: true } }}
+                    controls={true}
+                    className="mx-auto"
                     url="https://www.youtube.com/watch?v=0J2QdDbelmY&ab_channel=TheWhiteStripes"
                 />
                 </div>
                 <div className="col-12 col-md-6 col-xl-6 px-0">
                 <ReactPlayer
                     width="100%"
-                    pip
-                    controls="true"
-                    config={{ file: { forceHLS: true } }}
+                    controls={true}
+                    className="mx-auto"
                     url="https://www.youtube.com/watch?v=bpOSxM0rNPM&ab_channel=OfficialArcticMonkeys"
                 />
                 </div>
@@ -28,7 +26,6 @@ const MultipleVideos = props => {
                 <ReactPlayer
                     url={'https://www.youtube.com/watch?v=8SbUC-UaAxE'}
                     width="100%"
-                    playing={false}
                     controls={true}
                     className="mx-auto"
                     />
@@ -39,7 +36,6 @@ const MultipleVideos = props => {
                 <ReactPlayer
                     url={'https://www.youtube.com/watch?v=bC8EmPA6H6g&ab_channel=Moshcam'}
                     width="100%"
-                    playing={false}
                     controls={true}
                     className="mx-auto"
                     />
@@ -48,7 +44,6 @@ const MultipleVideos = props => {
                 <ReactPlayer
                     url={'https://www.youtube.com/watch?v=kXYiU_JCYtU&ab_channel=LinkinPark'}
                     width="100%"
-                    playing={false}
                     controls={true}
                     className="mx-auto"
                     />
