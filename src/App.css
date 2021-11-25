@@ -219,7 +219,10 @@ audio::-webkit-media-controls-panel{
   font-size: 5vw;
 }
 
-
+#leftcomp .text-holder p,
+#rightcomp .text-holder p {
+  margin-right: 20%;
+}
 
 #leftcomp h2,
 #rightcomp h2 {
@@ -414,6 +417,11 @@ canvas {
   #rightcomp h2::after {
     height: 0.65em !important;
     border-top: 3px solid #DA8E13;
+  }
+
+  #leftcomp .text-holder p,
+  #rightcomp .text-holder p {
+  margin-right: 0%;
   }
 
   #preview-image-wrapper li {
