@@ -12,7 +12,7 @@ const SpaceShip = () => {
 
   useEffect(() => {
     new GLTFLoader().load("/tanbur3dmodel.glb", setModel);
-  });
+  },[]);
 
   return model ? <primitive object={model.scene} /> : null;
 };
