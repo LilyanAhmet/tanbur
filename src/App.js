@@ -5,9 +5,10 @@ import InformationSection from './components/InformationSection';
 import BackgroundVideoSection from '../src/components/BackgroundVideoSection';
 import InformationSection2 from './components/InformationSection2';
 import MainParagraphInfo from './components/MainParagraphInfo';
-import ModelWhite from './components/3dModels/ModelWhite';
+/* import ModelWhite from './components/3dModels/ModelWhite'; */
 import CoverVideo from './components/CoverVideo';
 import MultipleVideos from './components/MultipleVideos';
+import Placeholder  from './components/Placeholder';
 import video1 from '../src/resources/video/bg-video-1.mp4';
 import video2 from '../src/resources/video/bg-video-2.mp4';
 import video3 from '../src/resources/video/bg-video-3.mp4';
@@ -31,6 +32,7 @@ function App() {
         <BackgroundVideoSection
           video={video1}
         />
+        <Placeholder />
         <BackgroundVideoSection
           video={video2}
         />
@@ -60,13 +62,13 @@ function App() {
         />
         <MainParagraphInfo
         />
-        <ModelWhite />
+        <Placeholder />
         <ParagraphInfo
         ParagraphText="These innovations introduced by Ostad Elahi are presented and played as follow by Dr. Shahrokh Elahi, 
         the youngest son of Ostad Elahi and the principal Legatee of his musical heritage."
         />
         <MultipleVideos
-          
+
         />
         <ParagraphInfo
         ParagraphText="‘’From the sound of the tanbur emanate particles that produce various scenes. 

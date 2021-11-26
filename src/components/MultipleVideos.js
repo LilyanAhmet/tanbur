@@ -11,7 +11,7 @@ const MultipleVideos = props => {
                     width="100%"
                     controls={true}
                     className="mx-auto"
-                    url="https://www.youtube.com/watch?v=0J2QdDbelmY&ab_channel=TheWhiteStripes"
+                    url="https://aws-3d-tanbur-bucket.s3.eu-central-1.amazonaws.com/The+Art+of+Tanbour+Part+I.mp4"
                 />
                 </div>
                 <div className="col-12 col-md-6 col-xl-6 px-0">
