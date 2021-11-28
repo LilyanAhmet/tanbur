@@ -10,7 +10,7 @@ export default class Header extends Component {
                 <title>Tanbur</title>
                 <img className="icon_3d" src={D360_Img} alt="Tanbur" />
                 <div className="container"> 
-                        <img className="banner-img img-fluid" src={Tanbur_Img} alt="Tanbur" />
+                        <img className="banner-img img-fluid" id="header-img" src={Tanbur_Img} alt="Tanbur" />
                 </div>
                 </header>
             </div>

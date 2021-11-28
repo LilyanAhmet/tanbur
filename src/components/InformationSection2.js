@@ -18,7 +18,7 @@ export default class InformationSection2 extends Component {
                 song={song6}
                 />
 
-                <div id="versus">V<span>S</span></div>
+                <div id="versus">Vs</div>
 
                 <LeftComp
                 image={Tanbur_3string}

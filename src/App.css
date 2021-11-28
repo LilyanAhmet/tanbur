@@ -25,6 +25,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  min-height: 280px;
 }
 
 /* AudioPlayer */
@@ -93,9 +94,42 @@ audio::-webkit-media-controls-panel{
 
 /* BackgroundVideoSection */
 
-#video1 {
+#backgroundvideo {
   z-index: -1;
   width: 100%;
+}
+
+.customPlayer .video-container {
+  position: relative;
+}
+
+.customPlayer .video-overlay {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  color: white;
+  font-family: CormorantSc;
+  font-weight: 400;
+}
+
+.customPlayer .video-overlay .first-two-text {
+  left: 10%;
+  position: relative;
+}
+
+.customPlayer .video-overlay .second-two-text {
+  left: 45%;
+  position: relative;
+}
+
+.customPlayer .video-overlay h2{
+  font-size: 4vw;
+  left: 70%;
+}
+
+.customPlayer .video-overlay p{
+  font-size: 1.4vw;
+  margin-bottom: 2%;
 }
 
 /* InformationSection */
@@ -118,7 +152,7 @@ audio::-webkit-media-controls-panel{
 
 .info-text h2 {
   font-family: CormorantSC;
-  font-size: 3.6vw;
+  font-size: 3.3vw;
   letter-spacing: 0.125em;
   color: #DA8E13;
   margin-bottom: 4%;
@@ -184,6 +218,10 @@ audio::-webkit-media-controls-panel{
   margin-right: -4px;
 }
 
+#preview-image-wrapper .banner-img {
+  min-height: auto;
+}
+
 #preview-image-wrapper .first-img-second-line {
   margin-left: 8% !important;
 }
@@ -210,13 +248,18 @@ audio::-webkit-media-controls-panel{
 
 #versus {
   font-size: 7vw;
+  font-family: CormorantSC;
   text-align: center;
   color: #DA8E13;
   margin: 1%;
 }
 
-#versus span {
-  font-size: 5vw;
+#leftcomp {
+  margin-top: -2%;
+}
+
+#rightcomp {
+  margin-top: -3%;
 }
 
 #leftcomp .text-holder p,
@@ -280,7 +323,23 @@ canvas {
   padding: 0;
 }
 
+#footer-gradient-line {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  width: 80%;
+  height: 0.2vw;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #9D795B 6.44%, #513D2B 12.16%, #DA8E13 40.24%, #DA8E13 48.29%, #DA8E13 55.57%, #4A3A2E 88.3%, #9D795B 93.11%, rgba(255, 255, 255, 0) 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Responsive */
+
+@media screen and (min-width: 1400px) {
+  .info-text .song-textbox{
+    padding-top: 5%;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .info-text {
@@ -344,6 +403,10 @@ canvas {
     letter-spacing: 2px;
   }
 
+  #header-img{
+    margin-top: 15%;
+  }
+
   audio::-webkit-media-controls-current-time-display,
   audio::-webkit-media-controls-time-remaining-display {
     font-size: 1em;
@@ -353,6 +416,10 @@ canvas {
   #custom-player2{
     width: 100% !important;
     height: 1.5em !important;
+  }
+
+  .banner-img {
+    min-height: auto;
   }
 
   .info-text h2 {
@@ -384,8 +451,13 @@ canvas {
     margin-top: 7%;
   }
 
+  .customPlayer .video-overlay p{
+    font-size: 2vw;
+    margin-bottom: 2%;
+  }
+
   #versus {
-    font-size: 7vw;
+    font-size: 20vw;
     margin: 7%;
     margin-top: 6%;
     margin-bottom: 2%;
@@ -394,6 +466,11 @@ canvas {
   #rightbanner,
   #leftbanner {
     padding: 0 15%;
+  }
+
+  #leftcomp,
+  #rightcomp {
+    margin-top: 0%;
   }
 
   #leftcomp h2,

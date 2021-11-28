@@ -35,6 +35,7 @@ export default class InformationSection extends Component {
                 subtext1="Haft Khân-e Rostam Suite"
                 subtext2="The Path of Divine Love"
                 song={song2}
+                padding={"pt-1"}
                 />
                 <RightInfo
                 image={Ahlehaqq_Img}
@@ -45,6 +46,7 @@ export default class InformationSection extends Component {
                 subtext1="Shâh Khoshini Suite"
                 subtext2="Awakening"
                 song={song3}
+                padding={"pt-3"}
                 />
                 <LeftInfo
                 image={Hadjnemat_Img}
@@ -56,6 +58,7 @@ export default class InformationSection extends Component {
                 subtext1="Sheykh Amiri Suite"
                 subtext2="Dialogue with the Beloved"
                 song={song4}
+                padding={"pt-3"}
                 />
                 <RightInfo
                 image={Ostadelahi_Img}
@@ -66,6 +69,7 @@ export default class InformationSection extends Component {
                 subtext1="Ostad Elahi’s Sheykh Amiri"
                 subtext2="Dialogue with the Beloved"
                 song={song5}
+                padding={"pt-3"}
                 />
             </div>
         )

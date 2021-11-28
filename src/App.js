@@ -5,6 +5,7 @@ import InformationSection from './components/InformationSection';
 import BackgroundVideoSection from '../src/components/BackgroundVideoSection';
 import InformationSection2 from './components/InformationSection2';
 import MainParagraphInfo from './components/MainParagraphInfo';
+import FooterSection from './components/hoc/FooterSection.js';
 /* import ModelWhite from './components/3dModels/ModelWhite'; */
 import CoverVideo from './components/CoverVideo';
 import MultipleVideos from './components/MultipleVideos';
@@ -14,6 +15,8 @@ import video2 from '../src/resources/video/bg-video-2.mp4';
 import video3 from '../src/resources/video/bg-video-3.mp4';
 import video4 from '../src/resources/video/bg-video-4.mp4';
 import video5 from '../src/resources/video/tanbur-cover-video.mp4';
+import placeholder_Img from "./resources/img/placeholder-img.png"
+import placeholder2_Img from "./resources/img/placeholder-2-img.png"
 
 function App() {
   return (
@@ -32,9 +35,15 @@ function App() {
         <BackgroundVideoSection
           video={video1}
         />
-        <Placeholder />
+        <Placeholder
+        image={placeholder2_Img}
+        />
         <BackgroundVideoSection
           video={video2}
+          text1={"THE"}
+          text2={"Sublimation"}
+          text3={"OF A"}
+          text4={"Tradition"}
         />
         <ParagraphInfo
         ParagraphText="Ostad Elahi added the third string and detuned it slightly from its twin.
@@ -45,6 +54,10 @@ function App() {
         <ParagraphInfo
         ParagraphText="Today, virtually all tanburs have three strings, 
         though few are aware of just how this third string was added to this ancient two-stringed instrument."
+        fontstyle="my-5"
+        />
+        <Placeholder 
+        image={placeholder_Img}
         />
         <ParagraphInfo
         ParagraphText="Ostad Elahi standardize the proportions of the instrument. 
@@ -62,7 +75,7 @@ function App() {
         />
         <MainParagraphInfo
         />
-        <Placeholder />
+
         <ParagraphInfo
         ParagraphText="These innovations introduced by Ostad Elahi are presented and played as follow by Dr. Shahrokh Elahi, 
         the youngest son of Ostad Elahi and the principal Legatee of his musical heritage."
@@ -73,10 +86,12 @@ function App() {
         <ParagraphInfo
         ParagraphText="‘’From the sound of the tanbur emanate particles that produce various scenes. 
         If we concentrate our attention with our eyes closed, those scenes can be seen as though on a movie screen.’’"
+        fontstyle="fst-italic"
         />
         <BackgroundVideoSection
           video={video4}
         />
+        <FooterSection />
       </div>
   );
 }

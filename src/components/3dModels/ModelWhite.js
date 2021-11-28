@@ -11,7 +11,7 @@ const SpaceShip = () => {
   const [model, setModel] = useState();
 
   useEffect(() => {
-    new GLTFLoader().load("/tanbur3dmodel.glb", setModel);
+    /* new GLTFLoader().load("/tanbur3dmodel.glb", setModel); */
   },[]);
 
   return model ? <primitive object={model.scene} /> : null;

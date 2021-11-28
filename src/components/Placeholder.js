@@ -1,12 +1,11 @@
 import React from 'react'
-import placeholder_Img from "../resources/img/placeholder-img.png"
 
-const Placeholder = () => {
+const Placeholder = (props) => {
     return (
         <div>
             <div className="row mx-0 my-5 py-3">
                 <div className="col-12">
-                    <img className="banner-img w-75" src={placeholder_Img} alt="Tanbur" />
+                    <img className="banner-img w-75" src={props.image} alt="Tanbur" />
                 </div>
             </div>
         </div>

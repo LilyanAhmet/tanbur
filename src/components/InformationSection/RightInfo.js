@@ -10,7 +10,7 @@ const RightInfo = props => {
                 </div>
                 <div className="col-12 col-md-6 px-0 info-text">
                     <div className="text-wrapper">
-                        <h2 className="pt-3">{props.title}</h2>
+                        <h2 className={props.padding}> {props.title}</h2>
                         <div className="text-box">
                             <div className="text-holder">
                                 <p className=""> {props.description1}
