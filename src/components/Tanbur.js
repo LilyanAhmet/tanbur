@@ -1,15 +1,16 @@
-import React, { Suspense, useRef, useState, useEffect } from "react";
+import React, { Suspense, useRef, useState, useEffect, useMemo } from "react";
 //import * as THREE from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Stage, useGLTF, Html } from "@react-three/drei";
 import { Section } from "./section";
 import { proxy, useSnapshot } from "valtio";
-
+import state1 from "./state";
 const state = proxy({
   current: null,
 });
 function Tanbur3d(props) {
   const { scene } = useGLTF("/tanbur3dmodel.glb");
+  //const copiedScene = useMemo(() => scene.clone(), [scene])
   const ref = useRef();
   return (
     <group
@@ -26,26 +27,20 @@ function Tanbur3d(props) {
   );
 }
 
-const HTMLContent = () => {
+const HTMLContent = ({rotation, domContent, children, positionY }) => {
   const ref = useRef();
-  useFrame(() => (ref.current.rotation.y += 0.01));
+  useFrame(() => (ref.current.rotation.y += 0.008));
   return (
     <Section factor={1.5} offset={1}>
-      <group position={[0, 250, 0]}>
+      <group position={[0, positionY, 0]}>
         <mesh ref={ref} position={[0, 0, 0]}>
-          <Tanbur3d scale={-1} rotation={[0, 16, Math.PI]} />
+          <Tanbur3d
+            scale={-1}
+            rotation={rotation}
+          />
         </mesh>
-        <Html fullscreen>
-          <div className="row">
-            <div className="col-md-6">
-              <div className="paragraphinfo ">
-                <h2>
-                  The current Kurdish tanbur is composed of a pear-shaped or
-                  ovoid body covered by a wooden sounding board.{" "}
-                </h2>
-              </div>
-            </div>
-          </div>
+        <Html portal={domContent} fullscreen>
+          {children}
         </Html>
       </group>
     </Section>
@@ -56,7 +51,10 @@ const Tanbur = () => {
   useEffect(() => {
     set(true);
   });
-  //maxPolarAngle={Math.PI / 2.8}
+  const domContent = useRef();
+  const scrollArea = useRef();
+  const onScroll = (e) => (state1.top.current = e.target.scrollTop);
+  useEffect(() => void onScroll({ target: scrollArea.current }), []);
   return (
     <div className="container-fluid">
       <div className="model-text">
@@ -75,10 +73,50 @@ const Tanbur = () => {
               adjustCamera={true}
               environment="city"
             >
-              <HTMLContent />
+              <HTMLContent domContent={domContent} rotation={[0, 16, Math.PI]} positionY={248}>
+                <div className="row">
+                  <div className="col-md-4">
+                    <div className="paragraphinfo ">
+                      <h2>
+                        The current Kurdish tanbur is composed of a pear-shaped
+                        or ovoid body covered by a wooden sounding board.{" "}
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </HTMLContent>
+              <HTMLContent domContent={domContent} rotation={[0, 16, Math.PI]} positionY={249}>
+                <div className="row">
+                  <div className="col-md-4">
+                    <div className="paragraphinfo ">
+                      <h2>
+                        The body, and especially the sounding board, must be
+                        made of mulberry wood.
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </HTMLContent>
+              <HTMLContent domContent={domContent} rotation={[0, 16, Math.PI]} positionY={250}>
+                <div className="row">
+                  <div className="col-md-4">
+                    <div className="paragraphinfo ">
+                      <h2>
+                        The Neck is made of walnut, mounted with fourteen frets
+                        made from entrails. The frets are an allusion to the
+                        levels of the celestial hierarchy.
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </HTMLContent>
             </Stage>
           </Suspense>
         </Canvas>
+        <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
+          <div style={{ position: "sticky", top: 0 }} ref={domContent}></div>
+          <div style={{ height: `${state1.sections * 100}vh` }}></div>
+        </div>
       </div>
     </div>
   );
