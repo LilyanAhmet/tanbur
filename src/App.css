@@ -332,6 +332,10 @@ canvas {
   margin-left: auto;
   margin-right: auto;
 }
+.model-text{
+  position: relative;
+  height: 1000px;
+}
 .video-gallery{
   height: 100%;
   width: 100%;

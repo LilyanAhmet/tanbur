@@ -9,8 +9,8 @@ import {
 } from "@react-three/drei";
 import { proxy, useSnapshot } from "valtio";
 const state = proxy({
-    current: null,
-  });
+  current: null,
+});
 function Tanbur3d(props) {
   const { scene } = useGLTF("/tanbur3dmodel.glb");
   const ref = useRef();
@@ -30,7 +30,6 @@ function Tanbur3d(props) {
   );
 }
 
-
 const Tanbur = () => {
   const [Start, set] = useState(true);
   useEffect(() => {
@@ -38,35 +37,41 @@ const Tanbur = () => {
   });
   //maxPolarAngle={Math.PI / 2.8}
   return (
-    <div className="bg">
-      <Canvas shadows camera>
-        <PerspectiveCamera
-          makeDefault
-          position={[0.4, 0.9, 1.8]}
-          fov={45}
-          zoom={0.9}
-        />
-
-        <OrbitControls autoRotate target={[-0.061775, 0.3, 0]} />
-        <Suspense fallback={null}>
-          <Stage
-            intensity={0.5}
-            contactShadowOpacity={0.6}
-            contactShadowBlur={1}
-            adjustCamera={true}
-            environment="city"
-          >
-            <group position={[-1, 0, 0]}>
-              <Tanbur3d
-                scale={-1}
-                position={[1.5, 0, 3]}
-                rotation={[0, 0.5, Math.PI]}
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-md-6"></div>
+        <div className="col-md-6">
+          <div className="model-text">
+            <Canvas shadows camera>
+              <PerspectiveCamera
+                makeDefault
+                position={[0.4, 0.9, 1.8]}
+                fov={50}
+                zoom={0.9}
               />
-              s
-            </group>
-          </Stage>
-        </Suspense>
-      </Canvas>
+
+              <OrbitControls autoRotate target={[-0.061775, 0.3, 0]} />
+              <Suspense fallback={null}>
+                <Stage
+                  intensity={0.5}
+                  contactShadowOpacity={0.6}
+                  contactShadowBlur={1}
+                  adjustCamera={true}
+                  environment="city"
+                >
+                  <group position={[-1, 0, 0]}>
+                    <Tanbur3d
+                      scale={-1}
+                      position={[1.5, 0, 3]}
+                      rotation={[0, 0.5, Math.PI]}
+                    />
+                  </group>
+                </Stage>
+              </Suspense>
+            </Canvas>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
