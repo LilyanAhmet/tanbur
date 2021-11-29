@@ -6,7 +6,7 @@ import BackgroundVideoSection from '../src/components/BackgroundVideoSection';
 import InformationSection2 from './components/InformationSection2';
 import MainParagraphInfo from './components/MainParagraphInfo';
 import FooterSection from './components/hoc/FooterSection.js';
-/* import ModelWhite from './components/3dModels/ModelWhite'; */
+import Tanbur from './components/Tanbur';
 import CoverVideo from './components/CoverVideo';
 import MultipleVideos from './components/MultipleVideos';
 import Placeholder  from './components/Placeholder';
@@ -56,9 +56,7 @@ function App() {
         though few are aware of just how this third string was added to this ancient two-stringed instrument."
         fontstyle="my-5"
         />
-        <Placeholder 
-        image={placeholder_Img}
-        />
+        <Tanbur/>
         <ParagraphInfo
         ParagraphText="Ostad Elahi standardize the proportions of the instrument. 
         He has defined exact specifications where he recommends how the instrument should made in with the correct proportions."

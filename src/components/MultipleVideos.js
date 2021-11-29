@@ -11,7 +11,7 @@ const MultipleVideos = props => {
                     width="100%"
                     controls={true}
                     className="mx-auto"
-                    url="https://aws-3d-tanbur-bucket.s3.eu-central-1.amazonaws.com/The+Art+of+Tanbour+Part+I.mp4"
+                    url="https://aws-3d-tanbur-bucket.s3.eu-central-1.amazonaws.com/tanbur_1.mov"
                 />
                 </div>
                 <div className="col-12 col-md-6 col-xl-6 px-0">
@@ -19,12 +19,12 @@ const MultipleVideos = props => {
                     width="100%"
                     controls={true}
                     className="mx-auto"
-                    url="https://www.youtube.com/watch?v=bpOSxM0rNPM&ab_channel=OfficialArcticMonkeys"
+                    url="https://aws-3d-tanbur-bucket.s3.eu-central-1.amazonaws.com/601417505.mp4"
                 />
                 </div>
                 <div className="col-12 col-md-12 col-xl-3 px-0">
                 <ReactPlayer
-                    url={'https://www.youtube.com/watch?v=8SbUC-UaAxE'}
+                    url="https://aws-3d-tanbur-bucket.s3.eu-central-1.amazonaws.com/The+Art+of+Ostad+Elahi.mp4"
                     width="100%"
                     controls={true}
                     className="mx-auto"
