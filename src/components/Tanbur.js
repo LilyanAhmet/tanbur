@@ -1,13 +1,16 @@
 import React, { Suspense, useRef, useState, useEffect } from "react";
 //import * as THREE from "three";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame, useThree  } from "@react-three/fiber";
 import {
   OrbitControls,
   Stage,
   useGLTF,
   PerspectiveCamera,
+
 } from "@react-three/drei";
+
 import { proxy, useSnapshot } from "valtio";
+
 const state = proxy({
   current: null,
 });
@@ -50,7 +53,7 @@ const Tanbur = () => {
                 zoom={0.9}
               />
 
-              <OrbitControls autoRotate target={[-0.061775, 0.3, 0]} />
+              <OrbitControls enableZoom={false} enablePan={false}  target={[-0.061775, 0.3, 0]} />
               <Suspense fallback={null}>
                 <Stage
                   intensity={0.5}
@@ -63,7 +66,7 @@ const Tanbur = () => {
                     <Tanbur3d
                       scale={-1}
                       position={[1.5, 0, 3]}
-                      rotation={[0, 0.5, Math.PI]}
+                      rotation={[0, 16, Math.PI]}
                     />
                   </group>
                 </Stage>
