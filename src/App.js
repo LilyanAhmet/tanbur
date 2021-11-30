@@ -16,35 +16,34 @@ import video3 from "../src/resources/video/bg-video-3.mp4";
 import video4 from "../src/resources/video/bg-video-4.mp4";
 import video5 from "../src/resources/video/tanbur-cover-video.mp4";
 
-function position(elem) { 
-  var left = 0, 
-      top = 0; 
+function position(elem) {
+  var left = 0,
+    top = 0;
 
-  do { 
-      left += elem.offsetLeft-elem.scrollLeft; 
-      top += elem.offsetTop-elem.scrollTop; 
-  } while ( elem = elem.offsetParent ); 
+  do {
+    left += elem.offsetLeft - elem.scrollLeft;
+    top += elem.offsetTop - elem.scrollTop;
+  } while ((elem = elem.offsetParent));
 
-  return  top ; 
-} 
-var delayedExec = function(after, fn) {
-  var timer
-  return function() {
-    timer && clearTimeout(timer)
-    timer = setTimeout(fn, after)
-  }
+  return top;
 }
-var scrollPosition = 0
+var delayedExec = function (after, fn) {
+  var timer;
+  return function () {
+    timer && clearTimeout(timer);
+    timer = setTimeout(fn, after);
+  };
+};
+var scrollPosition = 0;
 function positionSet(initialID) {
-  
-  scrollPosition = window.scrollTo(0,initialID)
+  scrollPosition = window.scrollTo(0, initialID);
 }
 
-var scrollStopper = delayedExec(200, function () {
-  const el1 = document.getElementById('m-2');
-   const el2 = document.getElementById('m-3');
-   const el3 = document.getElementById('m-5');
-   const el4 = document.getElementById('m-6');
+var scrollStopper = delayedExec(1500, function () {
+  const el1 = document.getElementById("m-2");
+  const el2 = document.getElementById("m-3");
+  const el3 = document.getElementById("m-5");
+  const el4 = document.getElementById("m-6");
   var screenPosition1 = position(el1);
   var screenPosition2 = position(el2);
   var screenPosition3 = position(el3);
@@ -54,22 +53,22 @@ var scrollStopper = delayedExec(200, function () {
       window.scrollY > document.getElementById("m-1").offsetTop &&
       window.scrollY < document.getElementById("m-2").offsetTop
     ) {
-      positionSet(screenPosition1)
-    }   else if (
+      positionSet(screenPosition1);
+    } else if (
       window.scrollY > document.getElementById("m-4").offsetTop &&
       window.scrollY < document.getElementById("m-5").offsetTop
     ) {
-      positionSet(screenPosition3)
-    }{
-     
+      positionSet(screenPosition3);
+    }
+    {
     }
   }
 });
 
 function App() {
-  window.addEventListener("scroll", function(e) {
-    scrollStopper()
-  })
+  window.addEventListener("scroll", function (e) {
+    scrollStopper();
+  });
   return (
     <div>
       <Header />
@@ -85,8 +84,10 @@ function App() {
         ParagraphText="The ancient forms of the tanbur were probably close to the instruments from the same family that can be found today in the Near East. 
         The specificity of these instruments resides in the fact that their two strings are struck together with the fingers of the right hand, and not with a plectrum."
       />
-      <div id="m-1">
-        <BackgroundVideoSection video={video1} />
+ <div id="m-1">
+      <BackgroundVideoSection video={video1} />
+     
+        <div style={{ height: "100px", width: "100%" }}></div>
       </div>
       <div id="m-2" className="wow">
         <Tanbur />
