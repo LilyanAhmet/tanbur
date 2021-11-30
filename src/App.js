@@ -18,6 +18,8 @@ import video5 from '../src/resources/video/tanbur-cover-video.mp4';
 import placeholder_Img from "./resources/img/placeholder-img.png"
 import placeholder2_Img from "./resources/img/placeholder-2-img.png"
 
+
+
 function App() {
   return (
       <div>

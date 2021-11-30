@@ -1,43 +1,67 @@
 import React, { Suspense, useRef, useState, useEffect, useMemo } from "react";
 //import * as THREE from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Stage, useGLTF, Html } from "@react-three/drei";
+import { OrbitControls, Stage, useGLTF, Html,useProgress } from "@react-three/drei";
 import { Section } from "./section";
 import { proxy, useSnapshot } from "valtio";
+// React Spring
+import { a, useTransition } from "@react-spring/web";
 import state1 from "./state";
 const state = proxy({
   current: null,
 });
 function Tanbur3d(props) {
   const { scene } = useGLTF("/tanbur3dmodel.glb");
-  //const copiedScene = useMemo(() => scene.clone(), [scene])
+  // const copiedScene = useMemo(() => scene.clone(), [scene])
   const ref = useRef();
   return (
-    <group
-      ref={ref}
-      dispose={null}
-      onClick={(e) => (
-        e.stopPropagation(), (state.current = e.object.material.name)
-      )}
-    >
-      <mesh>
-        <primitive object={scene} {...props} />
-      </mesh>
-    </group>
+    <>
+      <group
+        ref={ref}
+        dispose={null}
+        onClick={(e) => (
+          e.stopPropagation(), (state.current = e.object.material.name)
+        )}
+      >
+        <mesh>
+          <primitive object={scene} {...props} />
+        </mesh>
+      </group>
+    </>
   );
 }
-
-const HTMLContent = ({rotation, domContent, children, positionY }) => {
+function Loader() {
+  const { active, progress } = useProgress();
+  const transition = useTransition(active, {
+    from: { opacity: 1, progress: 0 },
+    leave: { opacity: 0 },
+    update: { progress },
+  });
+  return transition(
+    ({ progress, opacity }, active) =>
+      active && (
+        <a.div className='loading' style={{ opacity }}>
+          <div className='loading-bar-container'>
+            <a.div className='loading-bar' style={{ width: progress }}></a.div>
+          </div>
+        </a.div>
+      )
+  );
+}
+const HTMLContent = ({
+  rotation,
+  domContent,
+  children,
+  positionY,
+  positionYRot,
+}) => {
   const ref = useRef();
   useFrame(() => (ref.current.rotation.y += 0.008));
   return (
     <Section factor={1.5} offset={1}>
       <group position={[0, positionY, 0]}>
-        <mesh ref={ref} position={[0, 0, 0]}>
-          <Tanbur3d
-            scale={-1}
-            rotation={rotation}
-          />
+        <mesh ref={ref} position={[0, positionYRot, 0]}>
+          <Tanbur3d scale={-1} rotation={rotation} />
         </mesh>
         <Html portal={domContent} fullscreen>
           {children}
@@ -73,7 +97,12 @@ const Tanbur = () => {
               adjustCamera={true}
               environment="city"
             >
-              <HTMLContent domContent={domContent} rotation={[0, 16, Math.PI]} positionY={248}>
+              <HTMLContent
+                domContent={domContent}
+                rotation={[0, -16, Math.PI]}
+                positionY={0}
+                positionYRot={0}
+              >
                 <div className="row">
                   <div className="col-md-4">
                     <div className="paragraphinfo ">
@@ -85,7 +114,12 @@ const Tanbur = () => {
                   </div>
                 </div>
               </HTMLContent>
-              <HTMLContent domContent={domContent} rotation={[0, 16, Math.PI]} positionY={249}>
+              <HTMLContent
+                domContent={domContent}
+                rotation={[4, 16, Math.PI]}
+                positionY={1}
+                positionYRot={0}
+              >
                 <div className="row">
                   <div className="col-md-4">
                     <div className="paragraphinfo ">
@@ -97,7 +131,12 @@ const Tanbur = () => {
                   </div>
                 </div>
               </HTMLContent>
-              <HTMLContent domContent={domContent} rotation={[0, 16, Math.PI]} positionY={250}>
+              <HTMLContent
+                domContent={domContent}
+                rotation={[0, 16, Math.PI]}
+                positionY={2}
+                positionYRot={0}
+              >
                 <div className="row">
                   <div className="col-md-4">
                     <div className="paragraphinfo ">
@@ -113,6 +152,7 @@ const Tanbur = () => {
             </Stage>
           </Suspense>
         </Canvas>
+        <Loader />
         <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
           <div style={{ position: "sticky", top: 0 }} ref={domContent}></div>
           <div style={{ height: `${state1.sections * 100}vh` }}></div>
