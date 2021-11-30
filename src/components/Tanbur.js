@@ -66,12 +66,12 @@ const Tanbur = () => {
   return (
     <div className="container-fluid">
       <div className="model-text">
-        <Canvas shadows camera={{ position: [0.4, 0.9, 1.8], fov: 50 }}>
+        <Canvas shadows camera={{ position: [0.4, 0.9, 1.8], fov: 50 }} style={{width:"50%",float:"right"}}>
           <OrbitControls
             enableZoom={true}
             enablePan={true}
             enableRotate={true}
-            target={[-0.361775, 0.3, 0]}
+            target={[0, 0.3, 0]}
           />
           <Suspense fallback={null}>
             <Stage
