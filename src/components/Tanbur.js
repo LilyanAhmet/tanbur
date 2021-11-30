@@ -1,25 +1,22 @@
 import React, { Suspense, useRef, useState, useEffect, useMemo } from "react";
 //import * as THREE from "three";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import {
   OrbitControls,
   Stage,
   useGLTF,
-  Html,
   useProgress,
 } from "@react-three/drei";
-import { Section } from "./section";
-import { proxy, useSnapshot } from "valtio";
+import { proxy } from "valtio";
 // React Spring
 import { a, useTransition } from "@react-spring/web";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import state1 from "./state";
 const state = proxy({
   current: null,
 });
 function Tanbur3d(props) {
   const { scene } = useGLTF("/tanbur3dmodel.glb");
-  // const copiedScene = useMemo(() => scene.clone(), [scene])
+  const copiedScene = useMemo(() => scene.clone(), [scene])
   const ref = useRef();
   useFrame(() => (ref.current.rotation.y += 0.02));
   return (
@@ -32,7 +29,7 @@ function Tanbur3d(props) {
         )}
       >
         <mesh ref={ref}>
-          <primitive object={scene} {...props} />
+          <primitive object={copiedScene} {...props} />
         </mesh>
       </group>
     </>
