@@ -336,6 +336,16 @@ canvas {
   position: relative;
   height: 100vh;
 }
+.model-text h2{
+  font-size: 1.7vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.4vw;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  padding: 8% 0;
+}
 .model-text ::-webkit-scrollbar {
   display: none;
   overflow: hidden;

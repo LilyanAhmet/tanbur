@@ -1,11 +1,18 @@
 import React, { Suspense, useRef, useState, useEffect, useMemo } from "react";
 //import * as THREE from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Stage, useGLTF, Html,useProgress } from "@react-three/drei";
+import {
+  OrbitControls,
+  Stage,
+  useGLTF,
+  Html,
+  useProgress,
+} from "@react-three/drei";
 import { Section } from "./section";
 import { proxy, useSnapshot } from "valtio";
 // React Spring
 import { a, useTransition } from "@react-spring/web";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import state1 from "./state";
 const state = proxy({
   current: null,
@@ -14,6 +21,7 @@ function Tanbur3d(props) {
   const { scene } = useGLTF("/tanbur3dmodel.glb");
   // const copiedScene = useMemo(() => scene.clone(), [scene])
   const ref = useRef();
+  useFrame(() => (ref.current.rotation.y += 0.02));
   return (
     <>
       <group
@@ -23,7 +31,7 @@ function Tanbur3d(props) {
           e.stopPropagation(), (state.current = e.object.material.name)
         )}
       >
-        <mesh>
+        <mesh ref={ref}>
           <primitive object={scene} {...props} />
         </mesh>
       </group>
@@ -40,53 +48,29 @@ function Loader() {
   return transition(
     ({ progress, opacity }, active) =>
       active && (
-        <a.div className='loading' style={{ opacity }}>
-          <div className='loading-bar-container'>
-            <a.div className='loading-bar' style={{ width: progress }}></a.div>
+        <a.div className="loading" style={{ opacity }}>
+          <div className="loading-bar-container">
+            <a.div className="loading-bar" style={{ width: progress }}></a.div>
           </div>
         </a.div>
       )
   );
 }
-const HTMLContent = ({
-  rotation,
-  domContent,
-  children,
-  positionY,
-  positionYRot,
-}) => {
-  const ref = useRef();
-  useFrame(() => (ref.current.rotation.y += 0.008));
-  return (
-    <Section factor={1.5} offset={1}>
-      <group position={[0, positionY, 0]}>
-        <mesh ref={ref} position={[0, positionYRot, 0]}>
-          <Tanbur3d scale={-1} rotation={rotation} />
-        </mesh>
-        <Html portal={domContent} fullscreen>
-          {children}
-        </Html>
-      </group>
-    </Section>
-  );
-};
+
 const Tanbur = () => {
   const [Start, set] = useState(true);
   useEffect(() => {
     set(true);
   });
-  const domContent = useRef();
-  const scrollArea = useRef();
-  const onScroll = (e) => (state1.top.current = e.target.scrollTop);
-  useEffect(() => void onScroll({ target: scrollArea.current }), []);
+
   return (
     <div className="container-fluid">
       <div className="model-text">
         <Canvas shadows camera={{ position: [0.4, 0.9, 1.8], fov: 50 }}>
           <OrbitControls
-            enableZoom={false}
-            enablePan={false}
-            enableRotate={false}
+            enableZoom={true}
+            enablePan={true}
+            enableRotate={true}
             target={[-0.361775, 0.3, 0]}
           />
           <Suspense fallback={null}>
@@ -97,66 +81,90 @@ const Tanbur = () => {
               adjustCamera={true}
               environment="city"
             >
-              <HTMLContent
-                domContent={domContent}
-                rotation={[0, -16, Math.PI]}
-                positionY={0}
-                positionYRot={0}
-              >
-                <div className="row">
-                  <div className="col-md-4">
-                    <div className="paragraphinfo ">
-                      <h2>
-                        The current Kurdish tanbur is composed of a pear-shaped
-                        or ovoid body covered by a wooden sounding board.{" "}
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </HTMLContent>
-              <HTMLContent
-                domContent={domContent}
-                rotation={[4, 16, Math.PI]}
-                positionY={1}
-                positionYRot={0}
-              >
-                <div className="row">
-                  <div className="col-md-4">
-                    <div className="paragraphinfo ">
-                      <h2>
-                        The body, and especially the sounding board, must be
-                        made of mulberry wood.
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </HTMLContent>
-              <HTMLContent
-                domContent={domContent}
-                rotation={[0, 16, Math.PI]}
-                positionY={2}
-                positionYRot={0}
-              >
-                <div className="row">
-                  <div className="col-md-4">
-                    <div className="paragraphinfo ">
-                      <h2>
-                        The Neck is made of walnut, mounted with fourteen frets
-                        made from entrails. The frets are an allusion to the
-                        levels of the celestial hierarchy.
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </HTMLContent>
+              <group position={[0, 0, 0]}>
+                <Tanbur3d scale={-1} rotation={[0, 16, Math.PI]} />
+              </group>
             </Stage>
           </Suspense>
         </Canvas>
+        <Parallax pages={4} style={{ top: "0", left: "0", width: "50%" }}>
+          <ParallaxLayer
+            offset={0}
+            speed={2.5}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+
+              paddingLeft: "20%",
+              textAlign: "center",
+            }}
+          >
+            <h2>
+              The current Kurdish tanbur is composed of a pear-shaped or ovoid
+              body covered by a wooden sounding board.{" "}
+            </h2>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={1} speed={2} />
+
+          <ParallaxLayer
+            offset={1}
+            speed={0.5}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "black",
+
+              paddingLeft: "20%",
+              textAlign: "center",
+            }}
+          >
+            <h2>
+              The body, and especially the sounding board, must be made of
+              mulberry wood.
+            </h2>
+          </ParallaxLayer>
+
+          <ParallaxLayer
+            offset={2}
+            speed={0.5}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "black",
+
+              paddingLeft: "20%",
+              textAlign: "center",
+            }}
+          >
+            <h2>
+              The Neck is made of walnut, mounted with fourteen frets made from
+              entrails. The frets are an allusion to the levels of the celestial
+              hierarchy.
+            </h2>
+          </ParallaxLayer>
+          <ParallaxLayer
+            offset={3}
+            speed={0.5}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "black",
+              paddingLeft: "20%",
+              textAlign: "center",
+            }}
+          >
+            <h2>
+              Originally, the strings of the tanbur were made of silk or
+              entrails, but they were replaced probably a century ago by steel.
+            </h2>
+          </ParallaxLayer>
+        </Parallax>
         <Loader />
-        <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
-          <div style={{ position: "sticky", top: 0 }} ref={domContent}></div>
-          <div style={{ height: `${state1.sections * 100}vh` }}></div>
-        </div>
       </div>
     </div>
   );
