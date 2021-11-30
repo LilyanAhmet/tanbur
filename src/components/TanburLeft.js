@@ -87,7 +87,8 @@ const Tanbur = () => {
         <Parallax pages={2} style={{ top: "0", right: "0", width: "50%" }}>
           <ParallaxLayer
             offset={0}
-            speed={2.5}
+            speed={0.1}
+           
             style={{
               display: "flex",
               justifyContent: "center",
@@ -102,11 +103,10 @@ const Tanbur = () => {
             </h2>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1} speed={2} />
-
           <ParallaxLayer
             offset={1}
-            speed={0.5}
+            speed={0.1}
+            
             style={{
               display: "flex",
               justifyContent: "center",

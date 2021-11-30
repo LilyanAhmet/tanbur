@@ -72,8 +72,8 @@ const Tanbur = () => {
           />
           <Suspense fallback={null}>
             <Stage
-              intensity={0.5}
-              contactShadowOpacity={0.6}
+              intensity={0.1}
+              contactShadowOpacity={0.7}
               contactShadowBlur={1}
               adjustCamera={true}
               environment="city"
@@ -87,7 +87,7 @@ const Tanbur = () => {
         <Parallax pages={4} style={{ top: "0", left: "0", width: "50%" }}>
           <ParallaxLayer
             offset={0}
-            speed={2.5}
+            speed={0.1}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -107,7 +107,7 @@ const Tanbur = () => {
 
           <ParallaxLayer
             offset={1}
-            speed={0.5}
+            speed={0.1}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -126,7 +126,7 @@ const Tanbur = () => {
 
           <ParallaxLayer
             offset={2}
-            speed={0.5}
+            speed={0.1}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -145,7 +145,7 @@ const Tanbur = () => {
           </ParallaxLayer>
           <ParallaxLayer
             offset={3}
-            speed={0.5}
+            speed={0.1}
             style={{
               display: "flex",
               justifyContent: "center",
