@@ -45,9 +45,7 @@ var scrollStopper = delayedExec(1500, function () {
   const el3 = document.getElementById("m-5");
   const el4 = document.getElementById("m-6");
   var screenPosition1 = position(el1);
-  var screenPosition2 = position(el2);
   var screenPosition3 = position(el3);
-  var screenPosition4 = position(el4);
   if (document.body.clientWidth >= 992) {
     if (
       window.scrollY > document.getElementById("m-1").offsetTop &&
@@ -60,8 +58,7 @@ var scrollStopper = delayedExec(1500, function () {
     ) {
       positionSet(screenPosition3);
     }
-    {
-    }
+
   }
 });
 

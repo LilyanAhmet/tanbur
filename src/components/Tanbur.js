@@ -18,7 +18,7 @@ function Tanbur3d(props) {
   const { scene } = useGLTF("/tanbur3dmodel.glb");
   const copiedScene = useMemo(() => scene.clone(), [scene])
   const ref = useRef();
-  useFrame(() => (ref.current.rotation.y += 0.02));
+ // useFrame(() => (ref.current.rotation.y += 0.02));
   return (
     <>
       <group
@@ -65,9 +65,9 @@ const Tanbur = () => {
       <div className="model-text">
         <Canvas shadows camera={{ position: [0.4, 0.9, 1.8], fov: 50 }} style={{width:"50%",float:"right"}}>
           <OrbitControls
-            enableZoom={true}
+            enableZoom={false}
             enablePan={true}
-            enableRotate={true}
+            enableRotate={false}
             target={[0, 0.3, 0]}
           />
           <Suspense fallback={null}>
@@ -79,7 +79,7 @@ const Tanbur = () => {
               environment="city"
             >
               <group position={[0, 0, 0]}>
-                <Tanbur3d scale={-1} rotation={[0, 16, Math.PI]} />
+                <Tanbur3d scale={-1} rotation={[4, 6, Math.PI]} />
               </group>
             </Stage>
           </Suspense>
