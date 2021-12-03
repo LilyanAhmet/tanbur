@@ -30,7 +30,7 @@ const LeftInfo = props => {
                     </div>
                 </div>
                 <div className="col-12 col-md-6 px-0  order-1 order-md-2">
-                    <img className="banner-img img-fluid" src={props.image} alt="Tanbur" />
+                    <img className="banner-img img-fluid" src={props.image} alt="Tanbur" loading="lazy"/>
                 </div>
             </div>
         </div>

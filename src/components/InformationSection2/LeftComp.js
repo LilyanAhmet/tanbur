@@ -39,7 +39,7 @@ const LeftComp = props => {
                             <li className="second-img-second-line"></li>
                             <li className="second-img-third-line"></li>
                         </ul>
-                        <img className="banner-img img-fluid" id="leftbanner" src={props.image} alt="Tanbur" />
+                        <img className="banner-img img-fluid" id="leftbanner" src={props.image} alt="Tanbur" loading="lazy"/>
                     </div>
                 </div>
             </div>

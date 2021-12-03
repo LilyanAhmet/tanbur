@@ -6,7 +6,7 @@ const RightInfo = props => {
         <div>
             <div className="row mx-0">
                 <div className="col-12 col-md-6 px-0">
-                    <img className="banner-img img-fluid" src={props.image} alt="Tanbur" />
+                    <img className="banner-img img-fluid" src={props.image} alt="Tanbur" loading="lazy"/>
                 </div>
                 <div className="col-12 col-md-6 px-0 info-text">
                     <div className="text-wrapper">

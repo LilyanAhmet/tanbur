@@ -7,7 +7,7 @@ export default class Header extends Component {
             <div>
                 <header>
                 <div className="container"> 
-                        <img className="banner-img img-fluid" id="header-img" src={Tanbur_Img} alt="Tanbur" />
+                        <img className="banner-img img-fluid" id="header-img" src={Tanbur_Img} alt="Tanbur" loading="lazy"/>
                 </div>
                 </header>
             </div>
