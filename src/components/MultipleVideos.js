@@ -1,12 +1,11 @@
 import React from "react";
 import HoverVideoPlayer from "react-hover-video-player";
-import Tanbur_3string from "../resources/img/tanbur-3string-img.png";
 /* resources */
-import Place1 from '../resources/img/placeholder-1.png'
-import Place2 from '../resources/img/placeholder-2.png'
-import Place3 from '../resources/img/placeholder-3.png'
-import Place4 from '../resources/img/placeholder-4.png'
-import Place5 from '../resources/img/placeholder-5.png'
+import Place1 from '../resources/img/placeholder-1.webp'
+import Place2 from '../resources/img/placeholder-2.webp'
+import Place3 from '../resources/img/placeholder-3.webp'
+import Place4 from '../resources/img/placeholder-4.webp'
+import Place5 from '../resources/img/placeholder-5.webp'
 const MultipleVideos = (props) => {
   return (
     <div className="video-wrapper">

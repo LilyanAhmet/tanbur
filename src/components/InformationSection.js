@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import RightInfo from './InformationSection/RightInfo';
 import LeftInfo from './InformationSection/LeftInfo';
-import Prehistory_Img from "../resources/img/prehistory-img.png";
-import AncientPersia_Img from "../resources/img/ancient-persia-img.png";
-import Ahlehaqq_Img from "../resources/img/ahle-haqq-img.png";
-import Hadjnemat_Img from "../resources/img/hadj-nemat-img.png";
-import Ostadelahi_Img from "../resources/img/ostad-elahi-img.png";
+import Prehistory_Img from "../resources/img/prehistory-img.webp";
+import AncientPersia_Img from "../resources/img/ancient-persia-img.webp";
+import Ahlehaqq_Img from "../resources/img/ahle-haqq-img.webp";
+import Hadjnemat_Img from "../resources/img/hadj-nemat-img.webp";
+import Ostadelahi_Img from "../resources/img/ostad-elahi-img.webp";
 import song1 from '../resources/audio/1-history-prehistory.mp3'
 import song2 from '../resources/audio/2-history-ancientpersia.mp3'
 import song3 from '../resources/audio/3-history-ahle-haqq.mp3'
