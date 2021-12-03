@@ -5,8 +5,7 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-                <header> 
-                <title>Tanbur</title>
+                <header>
                 <div className="container"> 
                         <img className="banner-img img-fluid" id="header-img" src={Tanbur_Img} alt="Tanbur" />
                 </div>
