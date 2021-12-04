@@ -3,8 +3,8 @@ import LeftComp from './InformationSection2/LeftComp';
 import RightComp from './InformationSection2/RightComp';
 import Tanbur_2string from "../resources/img/tanbur-2string-img.png";
 import Tanbur_3string from "../resources/img/tanbur-3string-img.png";
-import song6 from '../resources/audio/tanbur-three-strings.mp3'
-import song7 from '../resources/audio/tanbur-two-strings.mp3'
+import song6 from '../resources/audio/tanbur-two-strings.mp3'
+import song7 from '../resources/audio/tanbur-three-strings.mp3'
 export default class InformationSection2 extends Component {
     render() {
         return (
