@@ -55,6 +55,8 @@ audio::-webkit-media-controls-panel{
   max-width: 84%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 12%;
+  margin-bottom: 12%;
 }
 
 .paragraphinfo h2 {
@@ -65,17 +67,15 @@ audio::-webkit-media-controls-panel{
   text-align: center;
   letter-spacing: 3px;
   text-transform: capitalize;
-  padding: 8% 0;
 }
 
 /* MainParagraphInfo */
 
 .mainparagraphinfo {
-  max-width: 84%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 12%;
 }
 
 .mainparagraphinfo h2,
@@ -86,6 +86,7 @@ audio::-webkit-media-controls-panel{
   font-size: 2vw;
   letter-spacing: 3px;
   line-height: 2em;
+  text-align: justify;
 }
 
 .mainparagraphinfo h2 span {
@@ -572,8 +573,11 @@ canvas {
 
   .mainparagraphinfo h2,
   .mainparagraphinfo h2 span {
-    font-size: 3.2vw;
+    font-size: 3.5vw;
     letter-spacing: 1px;
+    text-align: justify;
+    line-height: inherit;
+    letter-spacing: normal;
   }
 }
 

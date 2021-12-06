@@ -137,7 +137,7 @@ function App() {
       <MultipleVideos />
       <ParagraphInfo
         ParagraphText="“From the sound of the tanbur emanate particles that produce various scenes. 
-        If we concentrate our attention with our eyes closed, those scenes can be seen as though on a movie screen.’’"
+        If we concentrate our attention with our eyes closed, those scenes can be seen as though on a movie screen.”"
         fontstyle="fst-italic"
       />
       <BackgroundVideoSection video={video4} />
