@@ -576,8 +576,7 @@ canvas {
     font-size: 3.5vw;
     letter-spacing: 1px;
     text-align: justify;
-    line-height: inherit;
-    letter-spacing: normal;
+    line-height: 1.9em;
   }
 }
 
