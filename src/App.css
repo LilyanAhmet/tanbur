@@ -5,6 +5,31 @@ font-family: 'CormorantSC';
 src: local('MyFont'), url(resources/fonts/CormorantSC-Bold.ttf) format('woff');
 }
 
+/* Scroll bar */
+
+::-webkit-scrollbar-corner { background: rgba(0,0,0,0.5); }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c5c5c5 #f6f6f6;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+*::-webkit-scrollbar-track {
+  background:#f6f6f6;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:#c5c5c5;
+  border-radius: 20px;
+  border: 3px solid #f6f6f6;
+}
+
 /* Header-Body */
 
 header {
