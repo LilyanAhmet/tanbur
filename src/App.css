@@ -5,6 +5,13 @@ font-family: 'CormorantSC';
 src: local('MyFont'), url(resources/fonts/CormorantSC-Bold.ttf) format('woff');
 }
 
+@font-face {
+  font-family: 'Cormorant-medium';
+  src: local('MyFont'), url(resources/fonts/Cormorant-Medium.ttf) format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 /* Scroll bar */
 
 ::-webkit-scrollbar-corner { background: rgba(0,0,0,0.5); }
@@ -38,7 +45,6 @@ src: local('MyFont'), url(resources/fonts/CormorantSC-Bold.ttf) format('woff');
 
 header {
   margin-top: 2%;
-  font-family: Cormorant;
 }
 
 .header-wrapper td h1 {
@@ -64,11 +70,11 @@ header {
 }
 
 h1,h2,h3{
-  font-family: Cormorant;
+  font-family: Cormorant-medium;
 }
 
 p {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .icon_3d {
@@ -219,6 +225,7 @@ audio::-webkit-media-controls-panel{
   font-size: 1.3vw;
   padding-left: 20px;
   margin-right: 7%;
+  font-weight: 500;
 }
 
 .info-text .song-textbox {
