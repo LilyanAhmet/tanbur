@@ -37,7 +37,30 @@ src: local('MyFont'), url(resources/fonts/CormorantSC-Bold.ttf) format('woff');
 /* Header-Body */
 
 header {
+  margin-top: 2%;
   font-family: Cormorant;
+}
+
+.header-wrapper td h1 {
+  font-size: 15rem;
+  letter-spacing: 2vw;
+  padding-top: 230px;
+  color: #B0B0B0;
+}
+
+.header-wrapper img {
+ width: fit-content;
+ height: 450px;
+}
+
+.header-wrapper td h1 {
+  font-size: 16vw;
+  letter-spacing: 2vw;
+  padding-top: 16vw;
+}
+
+.header-wrapper img {
+ height: 35vw;
 }
 
 body {
@@ -169,6 +192,7 @@ audio::-webkit-media-controls-panel{
   font-weight: 700;
   letter-spacing: 3px;
   text-align: left;
+  background: #fbfbfd;
 }
 
 .info-text .text-wrapper {
@@ -199,7 +223,7 @@ audio::-webkit-media-controls-panel{
 }
 
 .info-text .song-textbox {
-  padding-top: 1%;
+  padding-top: 5%;
   text-transform: uppercase;
 }
 
@@ -422,13 +446,23 @@ canvas {
 }
 /* Responsive */
 
-@media screen and (min-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .info-text .song-textbox{
-    padding-top: 5%;
+    padding-top: 1%;
   }
 }
 
 @media screen and (max-width: 1200px) {
+  .header-wrapper td h1 {
+    font-size: 20vw;
+    letter-spacing: 2vw;
+    padding-top: 20vw;
+  }
+  
+  .header-wrapper img {
+   height: 45vw;
+  }
+
   .info-text {
     letter-spacing: 2px;
   }
@@ -479,6 +513,10 @@ canvas {
     padding-bottom: 30px;
   }
 
+  .header-wrapper td h1 {
+    padding-top: 22vw;
+  }
+
   .icon_3d {
     width: 40%;
   }
@@ -488,10 +526,6 @@ canvas {
     font-size: 3.5vw;
     line-height: inherit;
     letter-spacing: 2px;
-  }
-
-  #header-img{
-    margin-top: 15%;
   }
 
   audio::-webkit-media-controls-current-time-display,
