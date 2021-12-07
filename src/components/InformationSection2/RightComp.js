@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 
 const RightComp = props => {
     return (
-        <div>
+        <div className="versus-section">
             <div className="row mx-0">
                 <div className="col-12 col-md-6 px-0">
                     <div className="col-12 col-md-6 px-0 info-text" id="rightcomp">

@@ -358,6 +358,10 @@ audio::-webkit-media-controls-panel{
   z-index: -1;
 }
 
+.versus-section .info-text {
+  background: none;
+}
+
 .info-text2 .text-wrapper {
   padding-left: 10%;
 }

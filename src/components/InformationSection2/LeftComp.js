@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 
 const LeftComp = props => {
     return (
-        <div>
+        <div className="versus-section">
             <div className="row mx-0">
                 <div className="col-12 col-md-6 px-0 info-text order-2 order-md-1" id="leftcomp">
                     <h2 className="d-none d-md-block"><span className="outer">3 <span>S</span>tring</span></h2>
