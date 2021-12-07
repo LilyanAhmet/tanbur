@@ -63,8 +63,12 @@ header {
  height: 35vw;
 }
 
-body {
+h1,h2,h3{
   font-family: Cormorant;
+}
+
+p {
+  font-family: sans-serif;
 }
 
 .icon_3d {
@@ -111,14 +115,13 @@ audio::-webkit-media-controls-panel{
   margin-bottom: 12%;
 }
 
-.paragraphinfo h2 {
+.paragraphinfo p {
   font-size: 1.7vw;
   font-style: normal;
   font-weight: 700;
   line-height: 2.4vw;
   text-align: center;
   letter-spacing: 3px;
-  text-transform: capitalize;
 }
 
 /* MainParagraphInfo */
@@ -130,18 +133,18 @@ audio::-webkit-media-controls-panel{
   margin-top: 12%;
 }
 
-.mainparagraphinfo h2,
-.mainparagraphinfo h2 span {
+.mainparagraphinfo p,
+.mainparagraphinfo p span {
   font-style: normal;
   font-weight: 700;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.7vw;
   letter-spacing: 3px;
   line-height: 2em;
   text-align: justify;
 }
 
-.mainparagraphinfo h2 span {
+.mainparagraphinfo p span {
   color: grey;
 }
 
@@ -212,10 +215,6 @@ audio::-webkit-media-controls-panel{
   margin-bottom: 4%;
 }
 
-.info-text .text-box {
-  text-transform: capitalize;
-}
-
 .info-text .text-holder p {
   font-size: 1.3vw;
   padding-left: 20px;
@@ -224,12 +223,12 @@ audio::-webkit-media-controls-panel{
 
 .info-text .song-textbox {
   padding-top: 5%;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .info-text .text-wrapper2 .song-textbox {
   padding-top: 0%;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .info-text .song-name {
@@ -526,7 +525,7 @@ canvas {
   }
 
   header h2,
-  .paragraphinfo h2 {
+  .paragraphinfo p {
     font-size: 3.5vw;
     line-height: inherit;
     letter-spacing: 2px;
@@ -558,11 +557,11 @@ canvas {
   }
 
   .info-text .song-name {
-    font-size: 2.3vw;
+    font-size: 2.8vw;
   }
 
   .info-text .song-subtext {
-    font-size: 2vw;
+    font-size: 2.4vw;
   }
 
   .info-text .text-wrapper {
@@ -638,8 +637,8 @@ canvas {
     margin-left: 8% !important;
   }
 
-  .mainparagraphinfo h2,
-  .mainparagraphinfo h2 span {
+  .mainparagraphinfo p,
+  .mainparagraphinfo p span {
     font-size: 3.5vw;
     letter-spacing: 1px;
     text-align: justify;
