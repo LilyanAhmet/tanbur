@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Tanbur_Img from "../../resources/img/tanbur-banner-img-2.png";
+import Tanbur_Img from "../../resources/img/tanbur-banner-img.png";
 
 export default class Header extends Component {
     render() {
