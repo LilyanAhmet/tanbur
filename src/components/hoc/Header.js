@@ -7,16 +7,13 @@ export default class Header extends Component {
             <div>
                 <header>
                     <div className="container d-table header-wrapper">
-
                         <table className="mx-auto">
-                        <tr>
-                        <td><h1>TAN</h1></td>
-                        <td><img className="col-4" id="header-img" src={Tanbur_Img} alt="tanbur" /></td>
-                        <td><h1>UR</h1></td>
-                        </tr>
-
+                            <tr>
+                                <td><h1>TAN</h1></td>
+                                <td><img className="col-4" id="header-img" src={Tanbur_Img} alt="tanbur" /></td>
+                                <td><h1>UR</h1></td>
+                            </tr>
                         </table>
-
                     </div>
                 </header>
             </div>
