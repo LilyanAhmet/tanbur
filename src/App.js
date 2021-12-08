@@ -1,4 +1,5 @@
 import "./App.css";
+import LazyLoad from "react-lazyload";
 import Header from "./components/hoc/Header.js";
 import ParagraphInfo from "./components/ParagraphInfo";
 import InformationSection from "./components/InformationSection";
@@ -15,8 +16,9 @@ import video2 from "../src/resources/video/bg-video-2.mp4";
 import video3 from "../src/resources/video/bg-video-3.mp4";
 import video4 from "../src/resources/video/bg-video-4.mp4";
 import video5 from "../src/resources/video/tanbur-cover-video.mp4";
-
-function position(elem) {
+import VideoScroll from "./components/videos/video-scroll.js";
+import TextSection from "./components/videos/textSection";
+/*function position(elem) {
   var left = 0,
     top = 0;
 
@@ -58,14 +60,13 @@ var scrollStopper = delayedExec(1500, function () {
     ) {
       positionSet(screenPosition3);
     }
-
   }
-});
+});*/
 
 function App() {
-  window.addEventListener("scroll", function (e) {
+  /* window.addEventListener("scroll", function (e) {
     scrollStopper();
-  });
+  });*/
   return (
     <div>
       <Header />
@@ -75,15 +76,21 @@ function App() {
         It has existed in antiquated forms since the third millennium b.c., 
         and has been utilized for both secular and sacred music."
       />
-
+      <LazyLoad height={200} offset={100}>
+        <div style={{ height: "100vh", width: "100%", position: "relative" }}>
+          <VideoScroll />
+        </div>
+        <TextSection/>
+        
+      </LazyLoad>
       <InformationSection />
       <ParagraphInfo
         ParagraphText="The ancient forms of the tanbur were probably close to the instruments from the same family that can be found today in the Near East. 
         The specificity of these instruments resides in the fact that their two strings are struck together with the fingers of the right hand, and not with a plectrum."
       />
- <div id="m-1">
-      <BackgroundVideoSection video={video1} />
-     
+      <div id="m-1">
+        <BackgroundVideoSection video={video1} />
+
         <div style={{ height: "100px", width: "100%" }}></div>
       </div>
       <div id="m-2" className="wow">
