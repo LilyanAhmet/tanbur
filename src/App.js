@@ -76,13 +76,14 @@ function App() {
         It has existed in antiquated forms since the third millennium b.c., 
         and has been utilized for both secular and sacred music."
       />
-      <LazyLoad height={200} offset={100}>
+     
         <div style={{ height: "100vh", width: "100%", position: "relative" }}>
           <VideoScroll />
         </div>
+        
         <TextSection/>
         
-      </LazyLoad>
+     
       <InformationSection />
       <ParagraphInfo
         ParagraphText="The ancient forms of the tanbur were probably close to the instruments from the same family that can be found today in the Near East. 
@@ -93,9 +94,7 @@ function App() {
 
         <div style={{ height: "100px", width: "100%" }}></div>
       </div>
-      <div id="m-2" className="wow">
-        <Tanbur />
-      </div>
+
       <div id="m-3">
         <BackgroundVideoSection
           video={video2}
@@ -119,9 +118,7 @@ function App() {
           fontstyle="my-5"
         />
       </div>
-      <div id="m-5">
-        <TanburLeft />
-      </div>
+
       <div id="m-6">
         <ParagraphInfo
           ParagraphText="Ostad Elahi standardize the proportions of the instrument. 
