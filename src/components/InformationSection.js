@@ -25,6 +25,7 @@ export default class InformationSection extends Component {
                 subtext1="Tarz-e-Yâri Suite"
                 subtext2="A Spritual Epic"
                 song={song1}
+                audio="prehistory"
                 />
                 <LeftInfo
                 image={AncientPersia_Img}
@@ -47,6 +48,7 @@ export default class InformationSection extends Component {
                 subtext2="Awakening"
                 song={song3}
                 padding={"pt-3"}
+                audio="haqq"
                 />
                 <LeftInfo
                 image={Hadjnemat_Img}
@@ -70,6 +72,7 @@ export default class InformationSection extends Component {
                 subtext2="Dialogue with the Beloved"
                 song={song5}
                 padding={"pt-3"}
+                audio="Ostad"
                 />
             </div>
         )

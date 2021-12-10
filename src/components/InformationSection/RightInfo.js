@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactPlayer from "react-player";
-
+import Audio from "../CustomAudioPlayer/Audio";
 const RightInfo = props => {
     return (
         <div>
@@ -23,13 +23,7 @@ const RightInfo = props => {
                                 <p className="song-subtext">{props.subtext2}</p>
                             </div>
                         </div>
-                        <ReactPlayer
-                        url={props.song}
-                        id="custom-player"
-                        width="100%"
-                        playing={false}
-                        controls={true}
-                        />
+                        <Audio music={props.song} audio={props.audio} />
                     </div>
                 </div>
             </div>
