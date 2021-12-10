@@ -98,9 +98,9 @@ function App() {
       <div id="m-3">
         <BackgroundVideoSection
           video={video2}
-          text1={"THE"}
+          text1={"The"}
           text2={"Sublimation"}
-          text3={"OF A"}
+          text3={"Of A"}
           text4={"Tradition"}
         />
       </div>
