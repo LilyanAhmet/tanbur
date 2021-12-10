@@ -185,13 +185,15 @@ audio::-webkit-media-controls-panel{
 }
 
 .customPlayer .video-overlay h2{
-  font-size: 4vw;
+  font-size: 3.3vw;
   left: 70%;
+  font-family: CormorantSc;
 }
 
 .customPlayer .video-overlay p{
   font-size: 1.4vw;
   margin-bottom: 2%;
+  font-family: CormorantSc;
 }
 
 /* InformationSection */
