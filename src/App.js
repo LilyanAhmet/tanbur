@@ -93,10 +93,7 @@ function App() {
       
         <BackgroundVideoSection video={video1} />
 
-        <ParagraphInfo
-        ParagraphText="The ancient forms of the tanbur were probably close to the instruments from the same family that can be found today in the Near East. 
-        The specificity of these instruments resides in the fact that their two strings are struck together with the fingers of the right hand, and not with a plectrum."
-      />
+        <Tanbur />
 
       <div id="m-3">
         <BackgroundVideoSection
@@ -113,6 +110,9 @@ function App() {
         This slight difference of pitch creates beating tones between the two strings.
         There is a whole harmonic architecture."
       />
+
+      <TanburLeft />
+
       <InformationSection2 />
       <div id="m-4">
         <ParagraphInfo
