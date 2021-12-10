@@ -65,8 +65,8 @@ const Tanbur = () => {
       <div className="model-text">
         <Canvas shadows camera={{ position: [0.4, 0.9, 1.8], fov: 50 }} style={{width:"50%",float:"left"}}>
           <OrbitControls
-            enableZoom={true}
-            enablePan={true}
+            enableZoom={false}
+            enablePan={false}
             enableRotate={true}
             target={[0, 0.3, 0]}
           />
@@ -79,7 +79,7 @@ const Tanbur = () => {
               environment="city"
             >
               <group position={[0, 0, 0]}>
-                <Tanbur3d scale={-1} rotation={[0, 16, Math.PI]} />
+                <Tanbur3d scale={-1} rotation={[0, 6, Math.PI]} />
               </group>
             </Stage>
           </Suspense>
