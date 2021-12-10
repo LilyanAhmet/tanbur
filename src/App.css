@@ -97,10 +97,6 @@ audio::-webkit-media-controls-time-remaining-display{
   font-size: 1.3em;
 }
 
-audio::-webkit-media-controls-panel{
-  background-color: #DA8E13;
-}
-
 #custom-player{
   width: 91% !important;
   height: 2em !important;
@@ -185,13 +181,15 @@ audio::-webkit-media-controls-panel{
 }
 
 .customPlayer .video-overlay h2{
-  font-size: 4vw;
+  font-size: 3.3vw;
   left: 70%;
+  font-family: CormorantSc;
 }
 
 .customPlayer .video-overlay p{
   font-size: 1.4vw;
   margin-bottom: 2%;
+  font-family: CormorantSc;
 }
 
 /* InformationSection */
