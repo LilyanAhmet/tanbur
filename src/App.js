@@ -77,11 +77,12 @@ function App() {
         and has been utilized for both secular and sacred music."
       />
      
-        <div style={{ height: "100vh", width: "100%", position: "relative" }}>
+        <div style={{width: "100%", position: "relative" }}>
           <VideoScroll />
+          <TextSection/>
         </div>
         
-        <TextSection/>
+        
         
      
       <InformationSection />
@@ -89,11 +90,13 @@ function App() {
         ParagraphText="The ancient forms of the tanbur were probably close to the instruments from the same family that can be found today in the Near East. 
         The specificity of these instruments resides in the fact that their two strings are struck together with the fingers of the right hand, and not with a plectrum."
       />
-      <div id="m-1">
+      
         <BackgroundVideoSection video={video1} />
 
-        <div style={{ height: "100px", width: "100%" }}></div>
-      </div>
+        <ParagraphInfo
+        ParagraphText="The ancient forms of the tanbur were probably close to the instruments from the same family that can be found today in the Near East. 
+        The specificity of these instruments resides in the fact that their two strings are struck together with the fingers of the right hand, and not with a plectrum."
+      />
 
       <div id="m-3">
         <BackgroundVideoSection

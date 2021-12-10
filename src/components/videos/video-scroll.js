@@ -13,16 +13,17 @@ const setStyles = (wrapperEl, videoEl, playbackRate) => {
 class ScrollVideo extends React.Component {
   render() {
     return (
-      <div className="wrapper" >
+      
         <VideoScroll
     
-        onLoad={props =>
+/*         onLoad={props =>
             setStyles(props.wrapperEl, props.videoEl,150)
-          }
+          } */
           playbackRate={380}
           style={{ position: "sticky", top: "0"}}
         >
           <video
+            height={900}
             tabIndex={0}
             preload="preload"
             style={{ width: "100%", objectFit: "contain" }}
@@ -32,7 +33,7 @@ class ScrollVideo extends React.Component {
           </video>
         </VideoScroll>
       
-      </div>
+      
     );
   }
 }
