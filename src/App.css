@@ -203,6 +203,38 @@ audio::-webkit-media-controls-time-remaining-display{
   letter-spacing: 0.4vw;
 }
 
+/* CoverVideoSection */
+
+.cover-video-section {
+  width: 84%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--bs-gutter-x,.75rem);
+  padding-right: var(--bs-gutter-x,.75rem);
+}
+
+.cover-video-section .cover-player-left {
+  padding-top: 0%;
+  padding-bottom: 7%;
+  padding-right: 4%;
+  padding-left: 0%;
+}
+
+.cover-video-section .cover-player-right {
+  padding-top: 0%;
+  padding-bottom: 7%;
+  padding-right: 0%;
+  padding-left: 4%;
+}
+
+.cover-video-section .cover-player-center {
+  padding: 0%;
+}
+
+.cover-video-section .player {
+  border-radius: 0px;
+}
+
 /* InformationSection */
 
 .info-text {
@@ -599,6 +631,20 @@ canvas {
   .customPlayer .video-overlay h3{
     font-size: 3vw;
     margin-bottom: 0;
+  }
+
+  .cover-video-section {
+    width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--bs-gutter-x,.75rem);
+    padding-right: var(--bs-gutter-x,.75rem);
+  }
+  
+  .cover-video-section .cover-player-left,
+  .cover-video-section .cover-player-right,
+  .cover-video-section .cover-player-center {
+    padding: 5% 0%;
   }
 
   #versus {
