@@ -4,6 +4,7 @@
     align-items: center;
     background-color: #EFF1F2;
     border-radius: 30px;
+    margin-right: 10%;
 }
 .player .song {
     user-select: none;

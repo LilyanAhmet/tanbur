@@ -120,12 +120,13 @@ audio::-webkit-media-controls-time-remaining-display{
 }
 
 .paragraphinfo p {
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   font-style: normal;
   font-weight: 700;
   line-height: 2.4vw;
   text-align: center;
   letter-spacing: 3px;
+  text-align: justify;
 }
 
 /* MainParagraphInfo */
@@ -142,7 +143,7 @@ audio::-webkit-media-controls-time-remaining-display{
   font-style: normal;
   font-weight: 700;
   text-align: center;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   letter-spacing: 3px;
   line-height: 2em;
   text-align: justify;
@@ -247,6 +248,13 @@ audio::-webkit-media-controls-time-remaining-display{
 
 .info-text .text-wrapper {
   padding-left: 10%;
+  height: 100%;
+}
+.info-text .text-wrapper .text-box{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
 }
 
 .info-text .text-wrapper2 {
@@ -259,14 +267,14 @@ audio::-webkit-media-controls-time-remaining-display{
   font-size: 3.3vw;
   letter-spacing: 0.125em;
   color: #DA8E13;
-  margin-bottom: 4%;
 }
 
 .info-text .text-holder p {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding-left: 20px;
   margin-right: 7%;
   font-weight: 500;
+  text-align: justify;
 }
 
 .info-text .song-textbox {
@@ -443,7 +451,7 @@ canvas {
   height: 100vh;
 }
 .model-text h2{
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   font-style: normal;
   font-weight: 700;
   line-height: 2.4vw;

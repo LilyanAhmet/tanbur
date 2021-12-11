@@ -4,34 +4,47 @@ function CustomAudioHook(id) {
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
   const [playing, setPlaying] = useState(false);
+  const [stopAll, setStopAll] = useState(false);
   const [clickedTime, setClickedTime] = useState();
  
   useEffect(() => {
     const audio = document.getElementById(`${id}`);
-   
+    var sounds = document.getElementById("prehistory");
     const setAudioData = () => {
       setDuration(audio.duration);
       setCurTime(audio.currentTime);
-    }
+    };
+
+    const stopAllAudios = () => {
+      
+      if (!stopAll) {
+        setStopAll(true)
+        sounds.pause()
+      }
+    };
 
     const setAudioTime = () => setCurTime(audio.currentTime);
 
-    
     audio.addEventListener("loadeddata", setAudioData);
 
     audio.addEventListener("timeupdate", setAudioTime);
 
-    playing ? audio.play() : audio.pause();
+    if (playing) {
+      stopAllAudios();
+      audio.play();
+    } else {
+        audio.pause()
+    }
 
     if (clickedTime && clickedTime !== curTime) {
       audio.currentTime = clickedTime;
       setClickedTime(null);
-    } 
+    }
 
     return () => {
       audio.removeEventListener("loadeddata", setAudioData);
       audio.removeEventListener("timeupdate", setAudioTime);
-    }
+    };
   });
 
   return {
@@ -39,8 +52,8 @@ function CustomAudioHook(id) {
     duration,
     playing,
     setPlaying,
-    setClickedTime
-  }
+    setClickedTime,
+  };
 }
 
 export default CustomAudioHook;
