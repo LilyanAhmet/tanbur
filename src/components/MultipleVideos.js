@@ -14,7 +14,7 @@ const MultipleVideos = (props) => {
           <HoverVideoPlayer
             volume={1}
             muted={false}
-            videoSrc="https://videos.ctfassets.net/unrnfh6tg4kn/6EpNv5uYLX70WDOkXaUmhM/e5fe245f197b1ba4021f9ab78cddfa7e/tanbur_1.mp4"
+            videoSrc="https://videos.ctfassets.net/unrnfh6tg4kn/2Df4hXKKnGOAMDsPhzLK4p/868a3d7deaf046b2eab9fd816e3552b8/tanbur_2.mp4"
             className="video-gallery"
             pausedOverlay={
               <img
@@ -41,7 +41,7 @@ const MultipleVideos = (props) => {
           <HoverVideoPlayer
             volume={1}
             muted={false}
-            videoSrc="https://videos.ctfassets.net/unrnfh6tg4kn/2Df4hXKKnGOAMDsPhzLK4p/868a3d7deaf046b2eab9fd816e3552b8/tanbur_2.mp4"
+            videoSrc="https://videos.ctfassets.net/unrnfh6tg4kn/sFr1CLaPvD7RNiXhzNe9G/0ed05a86f271eebfca9cba6a99d4544b/tanbur_4.mp4"
             className="video-gallery"
             pausedOverlay={
               <img
@@ -68,7 +68,7 @@ const MultipleVideos = (props) => {
           <HoverVideoPlayer
             volume={1}
             muted={false}
-            videoSrc="https://videos.ctfassets.net/unrnfh6tg4kn/3yyUMz9ohAem6dCTuYmV77/ed51f1bf17eeb370c9930ed1f0ee7e53/tanbur_3.mp4"
+            videoSrc="https://videos.ctfassets.net/unrnfh6tg4kn/6EpNv5uYLX70WDOkXaUmhM/e5fe245f197b1ba4021f9ab78cddfa7e/tanbur_1.mp4"
             className="video-gallery"
             pausedOverlay={
               <img
@@ -97,7 +97,7 @@ const MultipleVideos = (props) => {
           <HoverVideoPlayer
             volume={1}
             muted={false}
-            videoSrc="https://videos.ctfassets.net/unrnfh6tg4kn/sFr1CLaPvD7RNiXhzNe9G/0ed05a86f271eebfca9cba6a99d4544b/tanbur_4.mp4"
+            videoSrc="https://videos.ctfassets.net/unrnfh6tg4kn/3yyUMz9ohAem6dCTuYmV77/ed51f1bf17eeb370c9930ed1f0ee7e53/tanbur_3.mp4"
             className="video-gallery"
             pausedOverlay={
               <img
