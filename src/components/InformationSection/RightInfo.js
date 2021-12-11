@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactPlayer from "react-player";
 import Audio from "../CustomAudioPlayer/Audio";
 const RightInfo = props => {
     return (

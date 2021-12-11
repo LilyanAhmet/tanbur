@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 
-function CustomAudioHook() {
+function CustomAudioHook(id) {
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
   const [playing, setPlaying] = useState(false);
   const [clickedTime, setClickedTime] = useState();
-
+ 
   useEffect(() => {
-    const audio = document.getElementById("haqq");
-
-
+    const audio = document.getElementById(`${id}`);
+   
     const setAudioData = () => {
       setDuration(audio.duration);
       setCurTime(audio.currentTime);

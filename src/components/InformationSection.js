@@ -37,6 +37,7 @@ export default class InformationSection extends Component {
                 subtext2="The Path of Divine Love"
                 song={song2}
                 padding={"pt-1"}
+                audio="persia"
                 />
                 <RightInfo
                 image={Ahlehaqq_Img}
@@ -61,6 +62,7 @@ export default class InformationSection extends Component {
                 subtext2="Dialogue with the Beloved"
                 song={song4}
                 padding={"pt-3"}
+                audio="nemat"
                 />
                 <RightInfo
                 image={Ostadelahi_Img}

@@ -8,7 +8,7 @@ import CustomAudioHook from "./CustomAudioHook";
 
 import './style.css'
 function Audio(props) {
-  const { curTime, duration, playing, setPlaying, setClickedTime } =  CustomAudioHook();
+  const { curTime, duration, playing, setPlaying, setClickedTime } =  CustomAudioHook(props.audio);
 
   return (
     <div className="player">
