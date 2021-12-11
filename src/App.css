@@ -419,6 +419,10 @@ audio::-webkit-media-controls-time-remaining-display{
   background: none;
 }
 
+.versus-section .player {
+  margin-right: 20%;
+}
+
 .info-text2 .text-wrapper {
   padding-left: 10%;
 }
@@ -654,6 +658,10 @@ canvas {
   .cover-video-section .cover-player-right,
   .cover-video-section .cover-player-center {
     padding: 5% 0%;
+  }
+
+  .versus-section .player {
+    margin-right: 0%;
   }
 
   #versus {
