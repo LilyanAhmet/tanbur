@@ -15,6 +15,7 @@ export default class InformationSection2 extends Component {
                 subtext1="emam Qolı"
                 subtext2="saharı"
                 song={song6}
+                audio="2-strings"
                 />
 
                 <div id="versus">Vs</div>
@@ -26,6 +27,7 @@ export default class InformationSection2 extends Component {
                 subtext1="ostad elahı"
                 subtext2="saharı"
                 song={song7}
+                audio="3-strings"
                 />
             </div>
         )

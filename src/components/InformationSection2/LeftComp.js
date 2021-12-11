@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactPlayer from "react-player";
-
+import Audio from "../CustomAudioPlayer/Audio";
 const LeftComp = props => {
     return (
         <div className="versus-section">
@@ -20,13 +20,7 @@ const LeftComp = props => {
                                 <p className="song-subtext">{props.subtext2}</p>
                             </div>
                         </div>
-                        <ReactPlayer
-                        id="custom-player2"
-                        url={props.song}
-                        width="100%"
-                        playing={false}
-                        controls={true}
-                        />
+                        <Audio music={props.song} audio={props.audio} />
                     </div>
                 </div>
                 <div className="col-12 col-md-6 px-0  order-1 order-md-2">

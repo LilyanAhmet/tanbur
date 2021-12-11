@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactPlayer from "react-player";
+import Audio from "../CustomAudioPlayer/Audio";
 
 const RightComp = props => {
     return (
@@ -32,13 +32,7 @@ const RightComp = props => {
                                 <p className="song-subtext">{props.subtext2}</p>
                             </div>
                         </div>
-                        <ReactPlayer
-                        id="custom-player2"
-                        url={props.song}
-                        width="100%"
-                        playing={false}
-                        controls={true}
-                        />
+                        <Audio music={props.song} audio={props.audio} />
                     </div>
                 </div>
             </div>
