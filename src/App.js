@@ -11,6 +11,7 @@ import Tanbur from "./components/Tanbur";
 import TanburLeft from "./components/TanburLeft";
 import CoverVideo from "./components/CoverVideo";
 import MultipleVideos from "./components/MultipleVideos";
+import FooterVideo from "./components/FooterVideo";
 import video1 from "../src/resources/video/bg-video-1.mp4";
 import video2 from "../src/resources/video/bg-video-2.mp4";
 import video3 from "../src/resources/video/bg-video-3.mp4";
@@ -150,7 +151,7 @@ function App() {
         If we concentrate our attention with our eyes closed, those scenes can be seen as though on a movie screen.”"
         fontstyle="fst-italic"
       />
-      <BackgroundVideoSection video={video4} />
+      <FooterVideo video={video4} />
       <FooterSection />
     </div>
   );
