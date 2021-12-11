@@ -234,6 +234,7 @@ audio::-webkit-media-controls-time-remaining-display{
 
 .cover-video-section .player {
   border-radius: 0px;
+  margin-right: 0%;
 }
 
 /* InformationSection */
