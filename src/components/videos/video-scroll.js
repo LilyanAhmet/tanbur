@@ -10,7 +10,7 @@ class ScrollVideo extends React.Component {
           height={900}
           tabIndex={0}
           preload="preload"
-          className="scroll-vide"
+          style={{ width: "100%", objectFit: "contain" }}
           playsInline
         >
           <source type="video/mp4" src={this.props.video} />

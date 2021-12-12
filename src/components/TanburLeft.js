@@ -63,6 +63,8 @@ const Tanbur = () => {
   return (
     <section className=" left-tanbur">
       <div className="model-text">
+        <div className="left-canvas">
+          </div>
         <Canvas shadows camera={{ position: [0.4, 0.9, 1.8], fov: 50 }} style={{width:"50%",float:"left"}}>
           <OrbitControls
             enableZoom={false}
