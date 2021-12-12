@@ -43,6 +43,16 @@ src: local('MyFont'), url(resources/fonts/CormorantSC-Bold.ttf) format('woff');
   background: rgba(85, 85, 85, 0.658); 
 }
 
+
+.video-scroll{
+  width: 100%;
+  object-fit: "contain";
+}
+.hoverd-video{
+  width: 100%;
+  height: 100%;
+  object-fit: "cover";
+}
 /* Header-Body */
 
 header {
