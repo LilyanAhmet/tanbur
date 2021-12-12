@@ -84,7 +84,7 @@ function App() {
         />
       </LazyLoad>
       <LazyLoad height={200} offset={100}>
-        <VideoScroll video="https://videos.ctfassets.net/unrnfh6tg4kn/4cOAol4C5DqYEmcmNlxmaK/d64b1eff711623b0a1fd7cfb876e2afb/bg-video-1_SparkVideo.mp4" rate="380" />
+        <VideoScroll video="https://videos.ctfassets.net/unrnfh6tg4kn/4cOAol4C5DqYEmcmNlxmaK/d64b1eff711623b0a1fd7cfb876e2afb/bg-video-1_SparkVideo.mp4" rate={380} />
         <TextSection />
       </LazyLoad>
       <LazyLoad height={200} offset={100}>
@@ -132,7 +132,7 @@ function App() {
         </div>
       </LazyLoad>
       <LazyLoad height={200} offset={100}>
-        <VideoScroll video="https://videos.ctfassets.net/unrnfh6tg4kn/6xJSTQc0ggm3we3Xpqbxwi/34148f72c3e9a1a2af15b0e19672d918/bg-video-3_SparkVideo.mp4"  rate="500"/>
+        <VideoScroll video="https://videos.ctfassets.net/unrnfh6tg4kn/6xJSTQc0ggm3we3Xpqbxwi/34148f72c3e9a1a2af15b0e19672d918/bg-video-3_SparkVideo.mp4"  rate={380}/>
         <TextSection />
       </LazyLoad>
       <LazyLoad height={200} offset={100}>
