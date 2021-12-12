@@ -61,13 +61,13 @@ const Tanbur = () => {
   });
 
   return (
-    <div className="container-fluid">
+    <section className=" left-tanbur">
       <div className="model-text">
         <Canvas shadows camera={{ position: [0.4, 0.9, 1.8], fov: 50 }} style={{width:"50%",float:"left"}}>
           <OrbitControls
             enableZoom={false}
             enablePan={false}
-            enableRotate={true}
+            enableRotate={false}
             target={[0, 0.3, 0]}
           />
           <Suspense fallback={null}>
@@ -124,7 +124,7 @@ const Tanbur = () => {
         </Parallax>
         <Loader />
       </div>
-    </div>
+    </section>
   );
 };
 

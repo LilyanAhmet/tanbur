@@ -3,7 +3,7 @@ import Audio from "../CustomAudioPlayer/Audio";
 
 const RightComp = props => {
     return (
-        <div className="versus-section">
+        <article className="versus-section">
             <div className="row mx-0">
                 <div className="col-12 col-md-6 px-0">
                     <div className="col-12 col-md-6 px-0 info-text" id="rightcomp">
@@ -36,7 +36,7 @@ const RightComp = props => {
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }
 

@@ -9,7 +9,7 @@ function CustomAudioHook(id) {
  
   useEffect(() => {
     const audio = document.getElementById(`${id}`);
-    var sounds = document.getElementById("prehistory");
+    var sounds = document.getElementsByTagName("audio");
     const setAudioData = () => {
       setDuration(audio.duration);
       setCurTime(audio.currentTime);
@@ -19,7 +19,12 @@ function CustomAudioHook(id) {
       
       if (!stopAll) {
         setStopAll(true)
-        sounds.pause()
+        for (var i = 0; i < sounds.length; i++) {
+          sounds[i].pause();
+          console.log(sounds[i]);
+        
+        }
+        console.log("entered")
       }
     };
 
@@ -29,11 +34,13 @@ function CustomAudioHook(id) {
 
     audio.addEventListener("timeupdate", setAudioTime);
 
+
+    
     if (playing) {
-      stopAllAudios();
+     // stopAllAudios();
       audio.play();
     } else {
-        audio.pause()
+      audio.pause();
     }
 
     if (clickedTime && clickedTime !== curTime) {

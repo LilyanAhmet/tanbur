@@ -5,11 +5,11 @@ import Bar from "./ProgressBar";
 
 import CustomAudioHook from "./CustomAudioHook";
 
-
-import './style.css'
+import "./style.css";
 function Audio(props) {
-  const { curTime, duration, playing, setPlaying, setClickedTime } =  CustomAudioHook(props.audio);
-  
+  const { curTime, duration, playing, setPlaying, setClickedTime } =
+    CustomAudioHook(props.audio);
+
   return (
     <div className="player">
       <audio id={props.audio}>
@@ -27,7 +27,6 @@ function Audio(props) {
           duration={duration}
           onTimeUpdate={(time) => setClickedTime(time)}
         />
-
       </div>
     </div>
   );

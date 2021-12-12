@@ -2,9 +2,9 @@ import React from 'react'
 
 const ParagraphInfo = props => {
     return (
-        <div className="paragraphinfo">
+        <section className="paragraphinfo">
            <p className={ props.fontstyle}>{props.ParagraphText}</p>
-        </div>
+        </section>
     )
 }
 

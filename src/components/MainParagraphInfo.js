@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainParagraphInfo = () => {
     return (
-        <div className="mainparagraphinfo">
+        <article className="mainparagraphinfo">
            <p><span>Not only did Ostad</span> transform <span>the art of tanbur through his </span> 
                 modifications <span>to the instrument—adding a</span> third string, 
                <span> innovating</span> new playing techniques <span>using the</span> all fingers of both hands, 
@@ -11,7 +11,7 @@ const MainParagraphInfo = () => {
                <span> — but he also elevated this ancient musical traditionto a learned art form by</span> assembling a repertoire <span>of</span> over a 
                hundred pieces.<span> Ultimately, the profound impact of Ostad’s music reflects the embodiment of a lifelong pursuit of
                </span> self-knowledge <span>in the quest for</span> existential meaning <span>and</span> transcendence.</p>
-        </div>
+        </article>
     )
 }
 

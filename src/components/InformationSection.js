@@ -14,7 +14,7 @@ import song5 from '../resources/audio/5-history-ostad.mp3'
 export default class InformationSection extends Component {
     render() {
         return (
-            <div>
+            <section>
                 <RightInfo
                 image={Prehistory_Img}
                 title="Prehistory"
@@ -76,7 +76,7 @@ export default class InformationSection extends Component {
                 padding={"pt-3"}
                 audio="Ostad"
                 />
-            </div>
+            </section>
         )
     }
 }

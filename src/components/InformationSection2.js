@@ -7,7 +7,7 @@ import song7 from '../resources/audio/tanbur-three-strings.mp3'
 export default class InformationSection2 extends Component {
     render() {
         return (
-            <div>
+            <section>
                 <RightComp
                 image={Versus_Background}
                 title="2 Strings"
@@ -29,7 +29,7 @@ export default class InformationSection2 extends Component {
                 song={song7}
                 audio="3-strings"
                 />
-            </div>
+            </section>
         )
     }
 }

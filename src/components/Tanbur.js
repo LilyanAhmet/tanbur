@@ -18,7 +18,7 @@ function Tanbur3d(props) {
   const { scene } = useGLTF("/tanbur3dmodel.glb");
   const copiedScene = useMemo(() => scene.clone(), [scene])
   const ref = useRef();
- // useFrame(() => (ref.current.rotation.y += 0.02));
+ useFrame(() => (ref.current.rotation.y += 0.02));
   return (
     <>
       <group
@@ -61,19 +61,19 @@ const Tanbur = () => {
   });
 
   return (
-    <div className="container-fluid">
+    <section >
       <div className="model-text">
         <Canvas shadows camera={{ position: [0.4, 0.9, 1.8], fov: 50 }} style={{width:"50%",float:"right"}}>
           <OrbitControls
             enableZoom={false}
             enablePan={false}
-            enableRotate={true}
+            enableRotate={false}
             target={[0, 0.3, 0]}
           />
           <Suspense fallback={null}>
             <Stage
-              intensity={0.1}
-              contactShadowOpacity={0.7}
+              intensity={0.6}
+              contactShadowOpacity={0.8}
               contactShadowBlur={1}
               adjustCamera={true}
               environment="city"
@@ -163,7 +163,7 @@ const Tanbur = () => {
         </Parallax>
         <Loader />
       </div>
-    </div>
+    </section>
   );
 };
 

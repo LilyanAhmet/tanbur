@@ -2,7 +2,7 @@ import React from "react";
 import Audio from "../CustomAudioPlayer/Audio";
 const LeftInfo = (props) => {
   return (
-    <div>
+    <article>
       <div className="row mx-0">
         <div className="col-12 col-md-6 px-0 info-text order-2 order-md-1">
           <div className="text-wrapper">
@@ -32,7 +32,7 @@ const LeftInfo = (props) => {
           />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

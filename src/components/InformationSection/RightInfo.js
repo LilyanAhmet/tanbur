@@ -2,7 +2,7 @@ import React from "react";
 import Audio from "../CustomAudioPlayer/Audio";
 const RightInfo = (props) => {
   return (
-    <div>
+    <article>
       <div className="row mx-0">
         <div className="col-12 col-md-6 px-0">
           <img
@@ -32,7 +32,7 @@ const RightInfo = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

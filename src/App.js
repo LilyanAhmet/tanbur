@@ -12,11 +12,6 @@ import TanburLeft from "./components/TanburLeft";
 import CoverVideo from "./components/CoverVideo";
 import MultipleVideos from "./components/MultipleVideos";
 import FooterVideo from "./components/FooterVideo";
-import video1 from "../src/resources/video/bg-video-1.mp4";
-import video2 from "../src/resources/video/bg-video-2.mp4";
-import video3 from "../src/resources/video/bg-video-3.mp4";
-import video4 from "../src/resources/video/bg-video-4.mp4";
-import video5 from "../src/resources/video/tanbur-cover-video.mp4";
 import VideoScroll from "./components/videos/video-scroll.js";
 import TextSection from "./components/videos/textSection";
 /*function position(elem) {
@@ -71,88 +66,109 @@ function App() {
   return (
     <div>
       <Header />
-
-      <ParagraphInfo
-        ParagraphText="Tanbur is a term used to describe long-necked lutes of all sizes. 
+      <LazyLoad height={200} offset={100}>
+        <ParagraphInfo
+          ParagraphText="Tanbur is a term used to describe long-necked lutes of all sizes. 
         It has existed in antiquated forms since the third millennium b.c., 
         and has been utilized for both secular and sacred music."
-      />
-     
-        <div style={{width: "100%", position: "relative" }}>
-          <VideoScroll />
-          <TextSection/>
-        </div>
-        
-        
-        
-     
-      <InformationSection />
-      <ParagraphInfo
-        ParagraphText="The ancient forms of the tanbur were probably close to the instruments from the same family that can be found today in the Near East. 
-        The specificity of these instruments resides in the fact that their two strings are struck together with the fingers of the right hand, and not with a plectrum."
-      />
-      
-        <BackgroundVideoSection video={video1} />
-
-        <Tanbur />
-
-      <div id="m-3">
-        <BackgroundVideoSection
-          video={video2}
-          text1={"The"}
-          text2={"Sublimation"}
-          text3={"Of A"}
-          text4={"Tradition"}
         />
-      </div>
+      </LazyLoad>
 
-      <ParagraphInfo
-        ParagraphText="Ostad Elahi added the third string and detuned it slightly from its twin.
+      <LazyLoad height={200} offset={100}>
+        <InformationSection />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <ParagraphInfo
+          ParagraphText="The ancient forms of the tanbur were probably close to the instruments from the same family that can be found today in the Near East. 
+        The specificity of these instruments resides in the fact that their two strings are struck together with the fingers of the right hand, and not with a plectrum."
+        />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <VideoScroll video="https://videos.ctfassets.net/unrnfh6tg4kn/4cOAol4C5DqYEmcmNlxmaK/d64b1eff711623b0a1fd7cfb876e2afb/bg-video-1_SparkVideo.mp4" rate="380" />
+        <TextSection />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <Tanbur />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <div id="m-3">
+          <BackgroundVideoSection
+            video="https://videos.ctfassets.net/unrnfh6tg4kn/7oPQYuvn6K0E6695c9yZfp/83efe2e966578fcf7ccfc953ff149db6/bg-video-2.mp4"
+            text1={"The"}
+            text2={"Sublimation"}
+            text3={"Of A"}
+            text4={"Tradition"}
+          />
+        </div>
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <ParagraphInfo
+          ParagraphText="Ostad Elahi added the third string and detuned it slightly from its twin.
         This slight difference of pitch creates beating tones between the two strings.
         There is a whole harmonic architecture."
-      />
-
-      <TanburLeft />
-
-      <InformationSection2 />
-      <div id="m-4">
-        <ParagraphInfo
-          ParagraphText="Today, virtually all tanburs have three strings, 
+        />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <TanburLeft />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <InformationSection2 />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <div id="m-4">
+          <ParagraphInfo
+            ParagraphText="Today, virtually all tanburs have three strings, 
         though few are aware of just how this third string was added to this ancient two-stringed instrument."
-          fontstyle="my-5"
-        />
-      </div>
-
-      <div id="m-6">
-        <ParagraphInfo
-          ParagraphText="Ostad Elahi standardize the proportions of the instrument. 
+            fontstyle="my-5"
+          />
+        </div>
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <div id="m-6">
+          <ParagraphInfo
+            ParagraphText="Ostad Elahi standardize the proportions of the instrument. 
         He has defined exact specifications where he recommends how the instrument should made in with the correct proportions."
-        />
-      </div>
-
-      <BackgroundVideoSection video={video3} />
-      <ParagraphInfo
-        ParagraphText="One of Ostad Elahi’s innovations is the introduction of a new resonance tuning (known as Farangi tuning) 
+          />
+        </div>
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <VideoScroll video="https://videos.ctfassets.net/unrnfh6tg4kn/6xJSTQc0ggm3we3Xpqbxwi/34148f72c3e9a1a2af15b0e19672d918/bg-video-3_SparkVideo.mp4"  rate="500"/>
+        <TextSection />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <ParagraphInfo
+          ParagraphText="One of Ostad Elahi’s innovations is the introduction of a new resonance tuning (known as Farangi tuning) 
         imparting a new effect to the sound of the instrument that opens up novel horizons for the player."
-      />
-      <CoverVideo video={video5} 
-      /* audio="prehistory"
-      song={song1} */
-      />
-      <MainParagraphInfo />
-
-      <ParagraphInfo
-        ParagraphText="These innovations introduced by Ostad Elahi are presented and played as follow by Dr. Shahrokh Elahi, 
+        />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <CoverVideo
+        />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <MainParagraphInfo />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <ParagraphInfo
+          ParagraphText="These innovations introduced by Ostad Elahi are presented and played as follow by Dr. Shahrokh Elahi, 
         the youngest son of Ostad Elahi and the principal Legatee of his musical heritage."
-      />
-      <MultipleVideos />
-      <ParagraphInfo
-        ParagraphText="“From the sound of the tanbur emanate particles that produce various scenes. 
+        />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <MultipleVideos />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <ParagraphInfo
+          ParagraphText="“From the sound of the tanbur emanate particles that produce various scenes. 
         If we concentrate our attention with our eyes closed, those scenes can be seen as though on a movie screen.”"
-        fontstyle="fst-italic"
-      />
-      <FooterVideo video={video4} />
-      <FooterSection />
+          fontstyle="fst-italic"
+        />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <FooterVideo video="https://videos.ctfassets.net/unrnfh6tg4kn/ojPz0qeBN4DvE06aPsU5s/d83aa4200f6ac135447d0ef976a899ce/bg-video-4.mp4" />
+        <FooterSection />
+      </LazyLoad>
+      s
     </div>
   );
 }

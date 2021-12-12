@@ -8,7 +8,7 @@ import Place4 from '../resources/img/placeholder-4.webp'
 import Place5 from '../resources/img/placeholder-5.webp'
 const MultipleVideos = (props) => {
   return (
-    <div className="video-wrapper">
+    <section className="video-wrapper">
       <div className="row mx-0">
         <div className="col-12 col-md-6 col-xl-4 px-0">
           <HoverVideoPlayer
@@ -148,7 +148,7 @@ const MultipleVideos = (props) => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

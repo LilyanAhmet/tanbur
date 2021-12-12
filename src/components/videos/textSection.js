@@ -2,7 +2,7 @@ import React from "react";
 
 const TextSection = (props) => {
   return (
-    <div>
+    <article>
       <section className="container g-annotation">
         <div className="content  scroll-text">
          {/* <h1>The current Kurdish tanbur is composed of a pear-shaped or ovoid body covered by a wooden sounding board. </h1> */}
@@ -28,7 +28,7 @@ const TextSection = (props) => {
       </section>
 
       <div id="set-height"></div>
-    </div>
+    </article>
   );
 };
 
