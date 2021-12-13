@@ -8,7 +8,20 @@ import CustomAudioHook from "./CustomAudioHook";
 import "./style.css";
 function Audio(props) {
   const { curTime, duration, playing, setPlaying, setClickedTime } =
-    CustomAudioHook(props.audio);
+    CustomAudioHook(props.audio, props.playingAudioId);
+
+    const playAudio = () => {
+      if(props.onAudioPlayed){
+       
+        props.onAudioPlayed();
+      }
+     
+      setPlaying(true);
+    }
+
+    const pauseAudio = () => {
+      setPlaying(false);
+    }
 
   return (
     <div className="player">
@@ -18,9 +31,9 @@ function Audio(props) {
       </audio>
       <div className="controls">
         {playing ? (
-          <Pause handleClick={() => setPlaying(false)} />
+          <Pause handleClick={pauseAudio} />
         ) : (
-          <Play handleClick={() => setPlaying(true)} />
+          <Play handleClick={playAudio} />
         )}
         <Bar
           curTime={curTime}

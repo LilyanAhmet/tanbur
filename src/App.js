@@ -14,6 +14,7 @@ import MultipleVideos from "./components/MultipleVideos";
 import FooterVideo from "./components/FooterVideo";
 import VideoScroll from "./components/videos/video-scroll.js";
 import TextSection from "./components/videos/textSection";
+import { useState } from "react";
 /*function position(elem) {
   var left = 0,
     top = 0;
@@ -60,6 +61,9 @@ var scrollStopper = delayedExec(1500, function () {
 });*/
 
 function App() {
+
+  const [playingAudioId, setPlayingAudioId] = useState('-');
+ 
   /* window.addEventListener("scroll", function (e) {
     scrollStopper();
   });*/
@@ -75,7 +79,7 @@ function App() {
       </LazyLoad>
 
       <LazyLoad height={200} offset={100}>
-        <InformationSection />
+        <InformationSection playingAudioId={playingAudioId} onAudioPlayed={audioId => setPlayingAudioId(audioId)} />
       </LazyLoad>
       <LazyLoad height={200} offset={100}>
         <ParagraphInfo
@@ -112,7 +116,7 @@ function App() {
         <TanburLeft />
       </LazyLoad>
       <LazyLoad height={200} offset={100}>
-        <InformationSection2 />
+        <InformationSection2 playingAudioId={playingAudioId} onAudioPlayed={audioId => setPlayingAudioId(audioId)}/>
       </LazyLoad>
       <LazyLoad height={200} offset={100}>
         <div id="m-4">
@@ -168,8 +172,9 @@ function App() {
         <FooterVideo video="https://videos.ctfassets.net/unrnfh6tg4kn/ojPz0qeBN4DvE06aPsU5s/d83aa4200f6ac135447d0ef976a899ce/bg-video-4.mp4" />
         <FooterSection />
       </LazyLoad>
-      s
+      
     </div>
+ 
   );
 }
 

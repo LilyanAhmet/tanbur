@@ -27,6 +27,12 @@ function RightInfo(props) {
       );
     }, []);
 
+    const audioPlayed = (audioId) => {
+      if(props.onAudioPlayed){
+        props.onAudioPlayed(props.audio);
+      }
+    }
+
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
@@ -101,7 +107,7 @@ function RightInfo(props) {
         </div>
         <div className="col-12 col-md-6 px-0 info-text">
           <div className="text-wrapper">
-            <h2 className={props.padding} id="right-info-title"> {props.title}</h2>
+            <h2 className={props.padding} id="right-info-title"> {props.title} </h2>
             <div className="text-box">
               <div>
                 <div className="text-holder">
@@ -113,7 +119,7 @@ function RightInfo(props) {
                     <p className="mb-0 song-name">{props.subtext1}</p>
                     <p className="song-subtext">{props.subtext2}</p>
                   </div>
-                  <Audio music={props.song} audio={props.audio} />
+                  <Audio music={props.song} audio={props.audio} playingAudioId={props.playingAudioId} onAudioPlayed={audioPlayed} />
                 </div>
               </div>
             </div>

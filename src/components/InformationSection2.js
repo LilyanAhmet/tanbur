@@ -5,6 +5,11 @@ import Versus_Background from "../resources/img/versus-background.webp";
 import song6 from '../resources/audio/tanbur-two-strings.mp3'
 import song7 from '../resources/audio/tanbur-three-strings.mp3'
 export default class InformationSection2 extends Component {
+    audioPlayed = (audioId) => {
+        if(this.props.onAudioPlayed){
+            this.props.onAudioPlayed(audioId);
+        }
+    }
     render() {
         return (
             <section>
@@ -16,6 +21,7 @@ export default class InformationSection2 extends Component {
                 subtext2="saharı"
                 song={song6}
                 audio="2-strings"
+                playingAudioId={this.props.playingAudioId}
                 />
 
                 <div id="versus">Vs</div>
@@ -28,6 +34,7 @@ export default class InformationSection2 extends Component {
                 subtext2="saharı"
                 song={song7}
                 audio="3-strings"
+                playingAudioId={this.props.playingAudioId}
                 />
             </section>
         )

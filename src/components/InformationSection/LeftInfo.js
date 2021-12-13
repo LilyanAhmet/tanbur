@@ -4,6 +4,8 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function LeftInfo(props) {
+
+  
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
   useEffect(() => {
@@ -26,6 +28,12 @@ function LeftInfo(props) {
       }
     );
   }, []);
+
+  const audioPlayed = (audioId) => {
+    if(props.onAudioPlayed){
+      props.onAudioPlayed(props.audio);
+    }
+  }
 
   useEffect(() => {
     const element = ref.current;
@@ -104,7 +112,7 @@ function LeftInfo(props) {
                     <p className="mb-0 song-name">{props.subtext1}</p>
                     <p className="song-subtext">{props.subtext2}</p>
                   </div>
-                  <Audio music={props.song} audio={props.audio} />
+                  <Audio music={props.song} audio={props.audio} playingAudioId={props.playingAudioId} onAudioPlayed={audioPlayed} />
                 </div>
               </div>
             </div>

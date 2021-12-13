@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-function CustomAudioHook(id) {
+function CustomAudioHook(id, playingAudioId) {
+  
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
   const [playing, setPlaying] = useState(false);
@@ -36,11 +37,13 @@ function CustomAudioHook(id) {
 
 
     
-    if (playing) {
-     // stopAllAudios();
+    if (playing && id === playingAudioId) {
+    // stopAllAudios();
       audio.play();
     } else {
+      setPlaying(false);
       audio.pause();
+      
     }
 
     if (clickedTime && clickedTime !== curTime) {

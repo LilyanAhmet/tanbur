@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import RightInfo from './InformationSection/RightInfo';
 import LeftInfo from './InformationSection/LeftInfo';
 import Prehistory_Img from "../resources/img/prehistory-img.webp";
@@ -11,7 +11,14 @@ import song2 from '../resources/audio/2-history-ancientpersia.mp3'
 import song3 from '../resources/audio/3-history-ahle-haqq.mp3'
 import song4 from '../resources/audio/4-history-hadjnemat.mp3'
 import song5 from '../resources/audio/5-history-ostad.mp3'
+
+
 export default class InformationSection extends Component {
+    audioPlayed = (audioId) => {
+        if(this.props.onAudioPlayed){
+            this.props.onAudioPlayed(audioId);
+        }
+    }
     render() {
         return (
             <section>
@@ -26,6 +33,8 @@ export default class InformationSection extends Component {
                 subtext2="A Spritual Epic"
                 song={song1}
                 audio="prehistory"
+                playingAudioId={this.props.playingAudioId}
+                onAudioPlayed={audioId => this.audioPlayed(audioId)}
                 />
                 <LeftInfo
                 image={AncientPersia_Img}
@@ -38,6 +47,8 @@ export default class InformationSection extends Component {
                 song={song2}
                 padding={"pt-1"}
                 audio="persia"
+                playingAudioId={this.props.playingAudioId}
+                onAudioPlayed={audioId => this.audioPlayed(audioId)}
                 />
                 <RightInfo
                 image={Ahlehaqq_Img}
@@ -50,6 +61,8 @@ export default class InformationSection extends Component {
                 song={song3}
                 padding={"pt-3"}
                 audio="haqq"
+                playingAudioId={this.props.playingAudioId}
+                onAudioPlayed={audioId => this.audioPlayed(audioId)}
                 />
                 <LeftInfo
                 image={Hadjnemat_Img}
@@ -63,6 +76,8 @@ export default class InformationSection extends Component {
                 song={song4}
                 padding={"pt-3"}
                 audio="nemat"
+                playingAudioId={this.props.playingAudioId}
+                onAudioPlayed={audioId => this.audioPlayed(audioId)}
                 />
                 <RightInfo
                 image={Ostadelahi_Img}
@@ -75,6 +90,8 @@ export default class InformationSection extends Component {
                 song={song5}
                 padding={"pt-3"}
                 audio="Ostad"
+                playingAudioId={this.props.playingAudioId}
+                onAudioPlayed={audioId => this.audioPlayed(audioId)}
                 />
             </section>
         )
