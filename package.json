@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/utils": "^4.11.2",
     "@react-spring/parallax": "^9.3.1",
     "@react-spring/web": "^9.3.1",
     "@react-three/drei": "^7.1.1",
